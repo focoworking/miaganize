@@ -106,6 +106,8 @@ def load_posts():
         if meta.get('category') not in CATS: meta['category'] = 'Trends'
         posts[lang].append(meta)
     for l in posts: posts[l].sort(key=lambda p: (p['date'], p['title']), reverse=True)
+    FEATURED = ['miami-art-week-2026-free-guide', 'miami-luxury-real-estate-2026', 'best-photo-spots-miami']
+    for l in posts: posts[l].sort(key=lambda p: FEATURED.index(p['slug']) if p['slug'] in FEATURED else 99)
     return posts
 
 def render_body(md_text):

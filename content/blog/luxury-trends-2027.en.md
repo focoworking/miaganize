@@ -48,7 +48,7 @@ Personal luxury goods (fashion, leather, jewelry, watches, beauty) shrank to €
 
 !! €358 billion: the size of the personal luxury goods market in 2025, down from €364 billion in 2024 (Bain–Altagamma, 2026).
 
-The tone from [McKinsey and The Business of Fashion's State of Fashion 2026](https://www.mckinsey.com/industries/apparel-fashion-and-luxury/our-insights/state-of-fashion) is similarly sober: the era of easy, price-led growth in luxury is fading, and 46% of executives surveyed expected industry conditions to worsen in 2026. Translation: buyers have noticed the price hikes, and they want something more than a bag that costs 50% more than it did in 2019.
+The tone from [McKinsey and The Business of Fashion's State of Fashion 2026](https://www.mckinsey.com/industries/apparel-fashion-and-luxury/our-insights/state-of-fashion) is similarly sober: the era of easy, price-led growth in luxury is fading, and 46% of executives surveyed expected industry conditions to worsen in 2026. Translation: buyers have noticed the price hikes, and they want something more than a bigger price tag.
 
 > The new status symbol isn't the thing. It's the time, the access and the body to enjoy it.
 
