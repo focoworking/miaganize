@@ -1,17 +1,24 @@
 # MIAGAZINE
 
-> MIAGAZINE is a digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials on fashion, architecture & interiors, hospitality & dining, art & culture and waterfront living, created by a curated network of Miami photographers, plus a free weekly newsletter, The Lens (Thursdays).
+> MIAGAZINE is a bilingual (English/Spanish) digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials by a curated network of Miami photographers and a researched, sourced Journal on fashion & models, real estate, economy, music, trends, food & drink, tech, waterfront, design & architecture and photography, plus a free weekly newsletter, The Lens (Thursdays).
 
 Key facts:
-- Coverage: Miami and South Florida (Miami Beach, Brickell, Design District, Wynwood, Coral Gables, Key Biscayne).
+- Coverage: Miami and South Florida.
 - Photographers submit for free, keep copyright, get full credit and earn 20% on partnerships they refer.
-- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects guide listing $99/month, Branded Story $650, Event Coverage $900, Founding Partner $1,500/year (10 spots).
-- Editorial policy: real photography only; paid content labeled "Partner".
+- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects listing $99/month, Branded Story $650, Event Coverage $900, Founding Partner $1,500/year.
+- Editorial policy: real photography only; paid content labeled "Partner"; speculative pieces labeled as fiction.
 
 ## Main pages
-- [Home](https://www.miagazine.com/): latest stories and newsletter signup
-- [Stories](https://www.miagazine.com/stories/): photographic editorials
-- [Miami Art Week 2026 Guide](https://www.miagazine.com/guides/miami-art-week-2026.html): dates, venues, neighborhoods
-- [Submit](https://www.miagazine.com/submit.html): open call and guidelines for photographers
-- [Advertise](https://www.miagazine.com/advertise.html): packages and rates
-- [About](https://www.miagazine.com/about.html): editorial standards and contact
+- [Home](https://www.miagazine.com/)
+- [Inicio (ES)](https://www.miagazine.com/es/)
+- [Submit](https://www.miagazine.com/submit.html)
+- [Advertise](https://www.miagazine.com/advertise.html)
+- [About](https://www.miagazine.com/about.html)
+
+## Journal (English)
+- [Michelin in Miami 2026: The Stars, the Bibs and the Bargains](https://www.miagazine.com/blog/michelin-guide-miami-2026.html): Fourteen starred dining rooms, a world-first kosher star and 18 Bib Gourmands. How Miami became Florida's Michelin capital, and how to eat it without going broke.
+- [Miami's Tech & AI Scene in 2026: Money, Talent and the Next Wave](https://www.miagazine.com/blog/miami-tech-ai-scene-2026.html): Palantir moved in, AI startups raised $1.23B and eMerge jumps to March 2027. Here's what's real in Miami tech right now.
+- [Miami Modeling Guide: Swim Week, Agencies and Staying Safe](https://www.miagazine.com/blog/miami-modeling-swim-week-guide.html): From poolside runways to licensed agencies: how Miami's model industry really works, what Swim Week 2027 may bring, and how to spot a scam.
+- [Miami Art Week 2026 for Free: The Smart Guide to Basel Week](https://www.miagazine.com/blog/miami-art-week-2026-free-guide.html): Art Basel Miami Beach runs Dec 4–6, but the best of Miami Art Week costs nothing. Here is how to see it by neighborhood, from Collins Park to the Design District.
+
+## Journal (Español)
