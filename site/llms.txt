@@ -1,0 +1,17 @@
+# MIAGAZINE
+
+> MIAGAZINE is a digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials on fashion, architecture & interiors, hospitality & dining, art & culture and waterfront living, created by a curated network of Miami photographers, plus a free weekly newsletter, The Lens (Thursdays).
+
+Key facts:
+- Coverage: Miami and South Florida (Miami Beach, Brickell, Design District, Wynwood, Coral Gables, Key Biscayne).
+- Photographers submit for free, keep copyright, get full credit and earn 20% on partnerships they refer.
+- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects guide listing $99/month, Branded Story $650, Event Coverage $900, Founding Partner $1,500/year (10 spots).
+- Editorial policy: real photography only; paid content labeled "Partner".
+
+## Main pages
+- [Home](https://www.miagazine.com/): latest stories and newsletter signup
+- [Stories](https://www.miagazine.com/stories/): photographic editorials
+- [Miami Art Week 2026 Guide](https://www.miagazine.com/guides/miami-art-week-2026.html): dates, venues, neighborhoods
+- [Submit](https://www.miagazine.com/submit.html): open call and guidelines for photographers
+- [Advertise](https://www.miagazine.com/advertise.html): packages and rates
+- [About](https://www.miagazine.com/about.html): editorial standards and contact
