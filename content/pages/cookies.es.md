@@ -3,13 +3,13 @@ title: "Política de cookies"
 slug: "cookies"
 lang: "es"
 updated: "2026-11-02"
-summary: "Qué cookies y tecnologías similares usa miagazine.com, para qué, durante cuánto tiempo y cómo puedes aceptarlas, rechazarlas o cambiar tu elección en cualquier momento."
+summary: "Qué cookies y tecnologías similares usa miagazine.com, para qué, durante cuánto tiempo y cómo puede aceptarlas, rechazarlas o cambiar su elección en cualquier momento."
 ---
-!! Por defecto: Solo funciona lo estrictamente necesario hasta que elijas. Nuestra analítica no usa cookies.
-!! Tu elección: Aceptar, Rechazar o Configurar en el banner. Rechazar es tan fácil como aceptar.
-!! Marketing: Las etiquetas de Meta o Google solo se cargan si están activadas y das tu consentimiento.
-!! Cambia de opinión: Usa el enlace "Preferencias de cookies" del footer cuando quieras. Tu elección dura 12 meses.
-!! GPC: Respetamos la señal Global Privacy Control de tu navegador.
+!! Por defecto: Solo funciona lo estrictamente necesario hasta que elija. Nuestra analítica no usa cookies.
+!! Su elección: Aceptar, Rechazar o Configurar en el banner. Rechazar es tan fácil como aceptar.
+!! Marketing: Las etiquetas de Meta o Google solo se cargan si están activadas y da su consentimiento.
+!! Cambie de opinión: Use el enlace "Preferencias de cookies" del footer cuando quiera. Su elección dura 12 meses.
+!! GPC: Respetamos la señal Global Privacy Control de su navegador.
 
 ## 1. Alcance
 
@@ -19,9 +19,9 @@ Fecha de vigencia: 2 de noviembre de 2026.
 
 ## 2. Qué son las cookies y el almacenamiento local
 
-Las **cookies** son pequeños archivos de texto que un sitio web guarda en tu navegador. Permiten al sitio recordar información entre páginas o visitas, como una preferencia o si iniciaste sesión. Las cookies que instala el sitio que visitas son "propias"; las que instala otro dominio (por ejemplo, una red social cuyo contenido está incrustado en la página) son "de terceros". Algunas caducan al cerrar el navegador ("de sesión"); otras permanecen durante un tiempo determinado ("persistentes").
+Las **cookies** son pequeños archivos de texto que un sitio web guarda en su navegador. Permiten al sitio recordar información entre páginas o visita, como una preferencia o si inició sesión. Las cookies que instala el sitio que visita son "propias"; las que instala otro dominio (por ejemplo, una red social cuyo contenido está incrustado en la página) son "de terceros". Algunas caducan al cerrar el navegador ("de sesión"); otras permanecen durante un tiempo determinado ("persistentes").
 
-El **almacenamiento local** (`localStorage`) es un espacio del navegador donde un sitio puede guardar pequeños datos. A diferencia de las cookies, no se envía al servidor en cada solicitud y permanece hasta que el sitio o tú lo borren.
+El **almacenamiento local** (`localStorage`) es un espacio del navegador donde un sitio puede guardar pequeños datos. A diferencia de las cookies, no se envía al servidor en cada solicitud y permanece hasta que el sitio o usted lo borren.
 
 Las **tecnologías similares** incluyen píxeles (pequeñas imágenes o scripts que informan que se vio una página o se realizó una acción) y kits de desarrollo de software. En esta Política, "cookies" abarca todas ellas.
 
@@ -29,45 +29,45 @@ Las **tecnologías similares** incluyen píxeles (pequeñas imágenes o scripts 
 
 Diseñamos el Sitio para funcionar con el menor rastreo posible:
 
-- No se ejecuta nada más allá de lo estrictamente necesario hasta que elijas en el banner.
+- No se ejecuta nada más allá de lo estrictamente necesario hasta que elija en el banner.
 - Nuestra analítica por defecto **no usa cookies** ni crea perfiles individuales.
-- Las etiquetas de marketing están **desactivadas por defecto**. Solo se cargan si MIAGAZINE las activó para una campaña **y** aceptaste la categoría Marketing.
-- El contenido incrustado de terceros (Instagram, YouTube y similares) solo se carga tras tu consentimiento o cuando haces clic para cargarlo.
-- Rechazar es tan fácil como aceptar, y puedes cambiar tu elección cuando quieras.
+- Las etiquetas de marketing están **desactivadas por defecto**. Solo se cargan si MIAGAZINE las activó para una campaña **y** aceptó la categoría Marketing.
+- El contenido incrustado de terceros (Instagram, YouTube y similares) solo se carga tras su consentimiento o cuando hace clic para cargarlo.
+- Rechazar es tan fácil como aceptar, y puede cambiar su elección cuando quiera.
 
 ## 4. Categorías que usamos
 
 ### 4.1 Necesarias
 
-Son imprescindibles para que el Sitio funcione y para recordar tus elecciones. No se pueden desactivar en nuestro panel porque, sin ellas, no podríamos recordar que rechazaste las demás. Usamos:
+Son imprescindibles para que el Sitio funcione y para recordar sus elecciones. No se pueden desactivar en nuestro panel porque, sin ellas, no podríamos recordar que rechazó las demás. Usamos:
 
-- **`mg-consent`** (almacenamiento local, propio): guarda tu elección de cookies (qué categorías aceptaste o rechazaste) y su fecha, para no preguntarte en cada página.
-- **Preferencia de idioma** (almacenamiento local o cookie, propio): recuerda si prefieres inglés o español.
+- **`mg-consent`** (almacenamiento local, propio): guarda su elección de cookies (qué categorías aceptó o rechazó) y su fecha, para no preguntarle en cada página.
+- **Preferencia de idioma** (almacenamiento local o cookie, propio): recuerda si prefiere inglés o español.
 - **Seguridad y entrega**: nuestro proveedor de alojamiento y distribución de contenido puede instalar cookies estrictamente necesarias para proteger el Sitio de bots y abusos y equilibrar el tráfico.
 
 ### 4.2 Analítica
 
-Medimos la audiencia con herramientas respetuosas con la privacidad y **sin cookies**, como Cloudflare Web Analytics o Plausible. Cuentan de forma agregada páginas vistas, sitios de procedencia, país aproximado y tipo de dispositivo, sin guardar cookies en tu dispositivo ni identificarte entre sitios.
+Medimos la audiencia con herramientas respetuosas con la privacidad y **sin cookies**, como Cloudflare Web Analytics o Plausible. Cuentan de forma agregada páginas vistas, sitios de procedencia, país aproximado y tipo de dispositivo, sin guardar cookies en su dispositivo ni identificarle entre sitios.
 
-Si alguna vez usamos una herramienta de analítica que instale cookies o identificadores similares, lo haremos **solo con tu consentimiento** a la categoría Analítica y la incluiremos en la tabla de abajo.
+Si alguna vez usamos una herramienta de analítica que instale cookies o identificadores similares, lo haremos **solo con su consentimiento** a la categoría Analítica y la incluiremos en la tabla de abajo.
 
 ### 4.3 Marketing
 
-Las etiquetas de marketing nos ayudan a medir los resultados de campañas y a mostrar anuncios relevantes en otras plataformas, por ejemplo el **Meta Pixel** o las etiquetas publicitarias de **Google**. Pueden instalar cookies que identifican tu navegador entre sitios y compartir datos con esas empresas según sus propias políticas de privacidad.
+Las etiquetas de marketing nos ayudan a medir los resultados de campañas y a mostrar anuncios relevantes en otras plataformas, por ejemplo el **Meta Pixel** o las etiquetas publicitarias de **Google**. Pueden instalar cookies que identifican su navegador entre sitios y compartir datos con esas empresas según sus propias políticas de privacidad.
 
-Estas etiquetas están **desactivadas por defecto**. Solo se cargan si (a) las hemos activado y (b) aceptaste la categoría Marketing. Si tu navegador envía la señal Global Privacy Control, no las cargaremos.
+Estas etiquetas están **desactivadas por defecto**. Solo se cargan si (a) las hemos activado y (b) aceptó la categoría Marketing. Si su navegador envía la señal Global Privacy Control, no las cargaremos.
 
 ### 4.4 Contenido incrustado de terceros
 
-Algunos artículos incluyen publicaciones, videos o mapas de terceros como Instagram o YouTube. Estos servicios pueden instalar sus propias cookies y recopilar datos cuando se carga el contenido. Para protegerte, mostramos un marcador y cargamos el contenido solo después de tu consentimiento o cuando haces clic para cargar ese elemento concreto. Cuando está disponible, usamos modos de privacidad mejorada (como el dominio `youtube-nocookie.com` de YouTube).
+Algunos artículos incluyen publicaciones, videos o mapas de terceros como Instagram o YouTube. Estos servicios pueden instalar sus propias cookies y recopilar datos cuando se carga el contenido. Para protegerle, mostramos un marcador y cargamos el contenido solo después de su consentimiento o cuando hace clic para cargar ese elemento concreto. Cuando está disponible, usamos modos de privacidad mejorada (como el dominio `youtube-nocookie.com` de YouTube).
 
 ## 5. Tabla de cookies y almacenamiento
 
-Las duraciones son aproximadas y pueden cambiar cuando los proveedores actualizan su tecnología. Las filas marcadas "solo si se activa" no aplican salvo que MIAGAZINE haya activado esa herramienta y hayas dado tu consentimiento.
+Las duraciones son aproximadas y pueden cambiar cuando los proveedores actualizan su tecnología. Las filas marcadas "solo si se activa" no aplican salvo que MIAGAZINE haya activado esa herramienta y haya dado su consentimiento.
 
 | Nombre | Proveedor | Categoría | Finalidad | Duración |
 |---|---|---|---|---|
-| `mg-consent` | MIAGAZINE (almacenamiento local) | Necesaria | Recuerda tus elecciones de cookies y la fecha | 12 meses; luego volvemos a preguntar |
+| `mg-consent` | MIAGAZINE (almacenamiento local) | Necesaria | Recuerda sus elecciones de cookies y la fecha | 12 meses; luego volvemos a preguntar |
 | Preferencia de idioma | MIAGAZINE | Necesaria | Recuerda inglés o español | [DURACIÓN] |
 | `__cf_bm` | Cloudflare | Necesaria | Gestión de bots y seguridad | 30 minutos |
 | Cloudflare Web Analytics o Plausible | Cloudflare / Plausible | Analítica | Estadísticas agregadas sin cookies | No instala cookies |
@@ -79,26 +79,26 @@ Las duraciones son aproximadas y pueden cambiar cuando los proveedores actualiza
 
 Actualizaremos esta tabla cada vez que añadamos o retiremos una herramienta.
 
-## 6. Cómo cambiar tus preferencias
+## 6. Cómo cambiar sus preferencias
 
-- **En nuestro Sitio.** Haz clic en **"Preferencias de cookies"** en el footer de cualquier página para reabrir el panel. Puedes aceptar o rechazar cada categoría y guardar. Retirar el consentimiento impide que las etiquetas no esenciales se carguen desde ese momento; para eliminar cookies ya instaladas, bórralas también en tu navegador.
-- **En tu navegador.** La mayoría de los navegadores permiten bloquear o borrar cookies y datos de sitios, y algunos bloquean por defecto las cookies de terceros. Encontrarás instrucciones en la ayuda de tu navegador (por ejemplo, Chrome, Safari, Firefox o Edge). Si borras los datos del sitio, ya no recordaremos tu elección y volveremos a mostrar el banner.
-- **Global Privacy Control (GPC).** Si tu navegador o una extensión envía la señal GPC, la tratamos como un rechazo de las cookies de marketing y como una solicitud de exclusión de la venta o el intercambio de información personal. Más información en nuestra [Política de privacidad](/es/legal/privacy.html).
-- **Ajustes de plataformas.** También puedes gestionar tus preferencias de anuncios directamente en tus cuentas de Meta y Google.
+- **En nuestro Sitio.** Haga clic en **"Preferencias de cookies"** en el footer de cualquier página para reabrir el panel. Puede aceptar o rechazar cada categoría y guardar. Retirar el consentimiento impide que las etiquetas no esenciales se carguen desde ese momento; para eliminar cookies ya instaladas, bórrelas también en su navegador.
+- **En su navegador.** La mayoría de los navegadores permiten bloquear o borrar cookies y datos de sitios, y algunos bloquean por defecto las cookies de terceros. Encontrará instrucciones en la ayuda de su navegador (por ejemplo, Chrome, Safari, Firefox o Edge). Si borra los datos del sitio, ya no recordaremos su elección y volveremos a mostrar el banner.
+- **Global Privacy Control (GPC).** Si su navegador o una extensión envía la señal GPC, la tratamos como un rechazo de las cookies de marketing y como una solicitud de exclusión de la venta o el intercambio de información personal. Más información en nuestra [Política de privacidad](/es/legal/privacy.html).
+- **Ajustes de plataformas.** También puede gestionar sus preferencias de anuncios directamente en sus cuentas de Meta y Google.
 
-## 7. Cuánto dura tu consentimiento
+## 7. Cuánto dura su consentimiento
 
-Guardamos tu elección durante **12 meses**. Después, o antes si cambiamos de forma importante las herramientas que usamos, te volveremos a preguntar. Puedes cambiarla en cualquier momento desde el enlace del footer.
+Guardamos su elección durante **12 meses**. Después, o antes si cambiamos de forma importante las herramientas que usamos, le volveremos a preguntar. Puede cambiarla en cualquier momento desde el enlace del footer.
 
 ## 8. Marco legal
 
 - **Unión Europea y EEE.** El artículo 5(3) de la Directiva sobre la privacidad y las comunicaciones electrónicas ([Directiva 2002/58/CE](https://eur-lex.europa.eu/eli/dir/2002/58/oj), modificada por la Directiva 2009/136/CE) exige consentimiento antes de almacenar información o acceder a ella en el dispositivo del usuario, salvo que sea estrictamente necesario para prestar un servicio que el usuario solicitó. Cuando las cookies implican datos personales, también se aplica el Reglamento General de Protección de Datos ([Reglamento (UE) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj)), incluido su estándar de consentimiento válido (libre, específico, informado e inequívoco; artículos 4.11 y 7).
 - **Reino Unido.** Se aplican normas similares bajo las Privacy and Electronic Communications Regulations y el UK GDPR.
-- **Estados Unidos.** Donde se apliquen leyes estatales de privacidad, las cookies de marketing pueden considerarse "compartir" información o "publicidad dirigida", algo que puedes rechazar desde nuestro panel o con GPC. Consulta nuestra [Política de privacidad](/es/legal/privacy.html) para los derechos de cada estado.
+- **Estados Unidos.** Donde se apliquen leyes estatales de privacidad, las cookies de marketing pueden considerarse "compartir" información o "publicidad dirigida", algo que puede rechazar desde nuestro panel o con GPC. Consulte nuestra [Política de privacidad](/es/legal/privacy.html) para los derechos de cada estado.
 
 ## 9. Cambios
 
-Podemos actualizar esta Política cuando cambien las herramientas que usamos o la ley. Publicaremos la nueva versión aquí con una nueva fecha de actualización y, cuando corresponda, te pediremos de nuevo tu consentimiento.
+Podemos actualizar esta Política cuando cambien las herramientas que usamos o la ley. Publicaremos la nueva versión aquí con una nueva fecha de actualización y, cuando corresponda, le pediremos de nuevo su consentimiento.
 
 ## 10. Contacto
 
@@ -107,6 +107,6 @@ Preguntas sobre cookies o esta Política:
 - **Email:** privacy@miagazine.com
 - **Correo postal:** [RAZÓN SOCIAL], [DIRECCIÓN POSTAL], Miami, FL
 
-Consulta también nuestra [Política de privacidad](/es/legal/privacy.html) y los [Términos de uso](/es/legal/terms.html).
+Consulte también nuestra [Política de privacidad](/es/legal/privacy.html) y los [Términos de uso](/es/legal/terms.html).
 
 *Este documento es informativo y no constituye asesoría legal. Debe ser revisado por un abogado licenciado en Florida antes de su publicación.*
