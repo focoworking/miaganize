@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Llegó Palantir, las startups de IA levantaron 1,230 millones y eMerge se adelanta a marzo de 2027. Lo que sí está pasando en el Miami tech."
 reading_minutes: 8
 cover_hint: "Atardecer sobre Brickell desde una terraza alta: laptops y espresso sobre mármol en primer plano, torres de vidrio iluminadas detrás, un reflejo tenue de código en la baranda de cristal."
+cover_image: "/assets/img/miami-tech-ai-scene-2026-cover.webp"
+cover_alt: "Una laptop cerrada y un espresso en una mesa de mármol en una terraza, con torres de la ciudad desenfocadas en azul al anochecer."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 70%"
 tldr:
   - "Las startups del sur de Florida captaron 4,130 millones de dólares en capital de riesgo en 2025, 49% más que en 2024, según eMerge Insights."
   - "eMerge Americas, la gran conferencia tech de Miami, será del 2 al 4 de marzo de 2027 en el Miami Beach Convention Center."

@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Ficción especulativa: arrecifes-muro, taxis acuáticos sin capitán y cangrejo moro de laboratorio. Un día inventado en 2035, con chequeo de realidad."
 reading_minutes: 8
 cover_hint: "Bahía de Biscayne antes del amanecer en larga exposición: la estela de luz de una lancha cruzando hacia el skyline del downtown, un helipuerto en azotea iluminado, gradación ligeramente futurista."
+cover_image: "/assets/img/miami-2035-speculative-future-cover.webp"
+cover_alt: "Un water taxi autónomo cruza una bahía en calma hacia torres con jardines verticales y un vertipuerto en la azotea al atardecer."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 62%"
 tldr:
   - "Esto es ficción especulativa: las tecnologías de 2035 son inventadas, pero cada una incluye un chequeo de realidad sobre lo que existe en 2026."
   - "El Southeast Florida Regional Climate Compact proyecta un aumento del nivel del mar de 10 a 17 pulgadas para 2040 y de 21 a 54 para 2070, frente a 2000."

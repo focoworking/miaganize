@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Torres de superdeportivos, un Waldorf de 1,049 pies y $4.3 millones para entrar al top 5%. Mientras, los condos viejos pagan la factura de Surfside."
 reading_minutes: 7
 cover_hint: "Vista desde el agua al atardecer hacia Downtown Miami: los cubos escalonados del Waldorf Astoria en construcción con grúa en la cima, la vela curva de Aston Martin Residences en primer plano y una lancha dejando estela blanca en la bahía de Biscayne."
+cover_image: "/assets/img/miami-luxury-real-estate-2026-cover.webp"
+cover_alt: "Una grúa reflejada en una fachada de vidrio verde azulado sobre un borde de concreto agrietado con una regla amarilla."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 72%"
 tldr:
   - "El lujo sigue subiendo: entrar al 5% más caro de las casas unifamiliares de Miami-Dade costó $4.3 millones en el primer semestre de 2026, frente a $3.2 millones en 2025 (MIAMI REALTORS)."
   - "El mercado se partió en dos: las torres nuevas y de marca se venden con prima, mientras los condos de más de 30 años absorben el costo de las leyes de seguridad post-Surfside (SB 4-D, HB 913)."

@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "18 spots, la hora exacta de luz y lo que nadie te dice: cuándo necesitas permiso, dónde no puede volar tu dron y qué lugares cobran por la sesión."
 reading_minutes: 9
 cover_hint: "Amanecer en Lummus Park: una torre salvavidas pastel en primer plano, arena con huellas, el sol rompiendo sobre el Atlántico y un fotógrafo con trípode recortado a contraluz."
+cover_image: "/assets/img/best-photo-spots-miami-cover.webp"
+cover_alt: "Una cámara en trípode frente a una torre de salvavidas pastel en la playa al amanecer."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 72%"
 tldr:
   - "South Beach mira al este: amanecer en South Pointe y en las torres salvavidas; el skyline de Brickell se fotografía mejor en la hora azul desde Virginia Key."
   - "Miami Beach no cobra su permiso de Film & Print, pero lo exige para sesiones comerciales en propiedad pública y zonas residenciales."

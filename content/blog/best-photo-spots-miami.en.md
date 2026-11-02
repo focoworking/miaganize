@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "18 spots, the exact light to chase, and what nobody tells you: when you need a permit, where your drone can't fly and which places charge for a shoot."
 reading_minutes: 9
 cover_hint: "Sunrise in Lummus Park: a pastel lifeguard tower in the foreground, footprints in the sand, the sun breaking over the Atlantic and a photographer with a tripod in silhouette."
+cover_image: "/assets/img/best-photo-spots-miami-cover.webp"
+cover_alt: "A camera on a tripod facing a pastel lifeguard tower on the beach at dawn."
+cover_credit: "AI-generated illustration"
+cover_position: "center 72%"
 tldr:
   - "South Beach faces east: shoot South Pointe and the lifeguard towers at sunrise; the Brickell skyline is best at blue hour from Virginia Key."
   - "Miami Beach charges nothing for its Film & Print permit, but requires it for commercial shoots on public property and in residential areas."

@@ -6,6 +6,9 @@ updated: "2026-11-02"
 layout: "feature"
 eyebrow: "La compañía"
 summary: "Un grupo selecto de publicistas, reporteros, fotógrafos y creadores de contenido unidos para mostrar Miami en su esplendor."
+hero_image: "/assets/img/about-hero.webp"
+hero_alt: "Cinco sillas de director en fila, cada una con una cámara, libretas, un micrófono, un teléfono y una pluma."
+hero_position: "center 60%"
 ---
 !! Qué somos: una revista digital de lujo, bilingüe, nacida en Miami en 2026.
 !! Quiénes la hacen: publicistas, reporteros, fotógrafos, filmmakers y creadores de contenido.

@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Supercar towers, a 1,049-foot Waldorf and a $4.3M entry ticket to the top 5%. Meanwhile, Miami's older condos are paying for Surfside. Here's the 2026 market."
 reading_minutes: 7
 cover_hint: "Golden-hour view from the water toward Downtown Miami: the stacked cubes of the Waldorf Astoria under construction with a crane on top, the curved sail of Aston Martin Residences in the foreground, and a tender boat cutting a white wake across Biscayne Bay."
+cover_image: "/assets/img/miami-luxury-real-estate-2026-cover.webp"
+cover_alt: "A crane reflected in a teal glass facade above a cracked concrete ledge with a yellow folding ruler."
+cover_credit: "AI-generated illustration"
+cover_position: "center 72%"
 tldr:
   - "Luxury keeps getting pricier: entry to Miami-Dade's top 5% of single-family sales rose to $4.3 million in the first half of 2026, up from $3.2 million in 2025 (MIAMI REALTORS)."
   - "The market has split: new and branded towers sell at a premium while condos 30+ years old absorb the costs of Florida's post-Surfside safety laws (SB 4-D, HB 913)."

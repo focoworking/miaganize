@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Miami is about to get its first supertall, and Florida already has a new height record. How to read the city now, from Deco neon to Herzog & de Meuron concrete."
 reading_minutes: 8
 cover_hint: "Blue hour from the Rickenbacker Causeway: the Brickell and Downtown skyline with the Waldorf Astoria crane lit and the Cipriani Residences silhouette against a cobalt sky, bay water in the foreground."
+cover_image: "/assets/img/miami-skyline-architecture-2026-cover.webp"
+cover_alt: "The rounded corner of a cream and mint Art Deco building with a slender glass tower behind."
+cover_credit: "AI-generated illustration"
+cover_position: "center 38%"
 tldr:
   - "Cipriani Residences reached its final height of 950 feet in July 2026 and is now the tallest tower in Florida, according to Thornton Tomasetti."
   - "The Waldorf Astoria Miami (100 stories, 1,049 feet) will be the city's first supertall; delivery is targeted for 2028, per Dezeen."

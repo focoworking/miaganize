@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "From poolside runways to licensed agencies: how Miami's model industry really works, what Swim Week 2027 may bring, and how to spot a scam."
 reading_minutes: 8
 cover_hint: "Golden-hour backstage at a poolside runway in Miami Beach: a model in a sculptural one-piece walks past a row of photographers, pool reflections on her skin, Art Deco hotel facade softly blurred behind."
+cover_image: "/assets/img/miami-modeling-swim-week-guide-cover.webp"
+cover_alt: "A model seen from behind in a magenta swimsuit at the edge of a pool, striped shadows on a pink wall."
+cover_credit: "AI-generated illustration"
+cover_position: "center 45%"
 tldr:
   - "Paraiso Miami Swim Week's 22nd edition ran May 28–31, 2026, showing spring, resort and cruise 2027 collections to buyers from 60+ countries."
   - "In Florida, talent agencies must hold a license from the DBPR under Chapter 468, Part VII, and the law prohibits registration fees."

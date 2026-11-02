@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Art Basel Miami Beach runs Dec 4–6, but the best of Miami Art Week costs nothing. Here is how to see it by neighborhood, from Collins Park to the Design District."
 reading_minutes: 8
 cover_hint: "Golden-hour crowd around artist-designed ping-pong tables in Collins Park, The Bass museum's facade softly lit behind, palms and long shadows, candid and vivid."
+cover_image: "/assets/img/miami-art-week-2026-free-guide-cover.webp"
+cover_alt: "A burnt-orange sculptural ping-pong table on a lawn at dawn, palm shadow and a limestone wall behind."
+cover_credit: "AI-generated illustration"
+cover_position: "center 60%"
 tldr:
   - "Miami Art Week 2026 runs roughly Nov 30–Dec 6; Art Basel Miami Beach opens to the public Dec 4–6 at the Miami Beach Convention Center."
   - "Free highlights include Public Art Fund's 'Between Tides' ping-pong tables in Collins Park (Nov 29–Dec 6), ICA Miami (always free) and the Design District's public art."

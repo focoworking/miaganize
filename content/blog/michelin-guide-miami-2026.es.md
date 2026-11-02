@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Catorce restaurantes con estrella, la primera estrella kosher del mundo y 18 Bib Gourmand. Así se convirtió Miami en la capital Michelin de Florida."
 reading_minutes: 7
 cover_hint: "Toma cenital de una barra de omakase al atardecer: manos del chef colocando nigiri en un plato de cerámica oscura, luz de Miami entrando por la ventana, poca profundidad de campo."
+cover_image: "/assets/img/michelin-guide-miami-2026-cover.webp"
+cover_alt: "Una sola pieza de nigiri de atún en un plato de cerámica oscura iluminada por un rayo de sol, junto a la mano del chef."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 62%"
 tldr:
   - "Miami y Miami Beach suman 14 restaurantes con estrella en la Guía Michelin Florida 2026: uno con dos estrellas (L'Atelier de Joël Robuchon) y 13 con una."
   - "La edición 2026, publicada el 28 de mayo de 2026, es la primera que cubre todo Florida: 200 restaurantes y 41 tipos de cocina."

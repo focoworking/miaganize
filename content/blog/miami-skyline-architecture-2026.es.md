@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Miami está por estrenar su primer supertall y Florida ya tiene nuevo récord de altura. Así se lee hoy la ciudad, del neón Art Deco al hormigón de Herzog & de Meuron."
 reading_minutes: 8
 cover_hint: "Hora azul desde el Rickenbacker Causeway: el skyline de Brickell y Downtown con la grúa del Waldorf Astoria encendida y la silueta de Cipriani Residences recortada contra un cielo cobalto, agua de la bahía en primer plano."
+cover_image: "/assets/img/miami-skyline-architecture-2026-cover.webp"
+cover_alt: "La esquina curva de un edificio Art Deco crema y menta con una torre de vidrio esbelta al fondo."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 38%"
 tldr:
   - "Cipriani Residences llegó a su altura final de 950 pies en julio de 2026 y hoy es la torre más alta de Florida, según Thornton Tomasetti."
   - "El Waldorf Astoria Miami (100 pisos, 1,049 pies) será el primer supertall de la ciudad; su entrega está prevista para 2028, según Dezeen."

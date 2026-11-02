@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "De las pasarelas sobre la piscina a las agencias con licencia: cómo funciona de verdad el modelaje en Miami, qué esperar del Swim Week 2027 y cómo detectar una estafa."
 reading_minutes: 8
 cover_hint: "Backstage en hora dorada junto a una pasarela sobre piscina en Miami Beach: una modelo con traje de baño escultural camina frente a una fila de fotógrafos, reflejos del agua en la piel y una fachada Art Deco desenfocada al fondo."
+cover_image: "/assets/img/miami-modeling-swim-week-guide-cover.webp"
+cover_alt: "Una modelo de espaldas con traje de baño magenta al borde de una piscina, con sombras de rayas sobre un muro rosa."
+cover_credit: "Ilustración generada con IA"
+cover_position: "center 45%"
 tldr:
   - "La 22.ª edición de Paraiso Miami Swim Week fue del 28 al 31 de mayo de 2026 y presentó colecciones primavera, resort y crucero 2027 ante compradores de más de 60 países."
   - "En Florida, las agencias de talento necesitan licencia del DBPR según el capítulo 468, parte VII, y la ley prohíbe cobrar cuotas de inscripción."

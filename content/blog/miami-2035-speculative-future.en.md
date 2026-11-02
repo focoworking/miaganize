@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Concept fiction: reef seawalls, robot water taxis and lab-grown stone crab. One invented day in 2035 Miami, with reality checks on what exists today."
 reading_minutes: 8
 cover_hint: "Pre-dawn Biscayne Bay in long exposure: a small boat's light trail crossing the water toward a glowing downtown skyline, one rooftop helipad lit in the frame, slightly futuristic grade."
+cover_image: "/assets/img/miami-2035-speculative-future-cover.webp"
+cover_alt: "A driverless water taxi crosses a calm bay toward towers with vertical gardens and a rooftop vertiport at dusk."
+cover_credit: "AI-generated illustration"
+cover_position: "center 62%"
 tldr:
   - "This is concept fiction: the 2035 technologies described are invented, but each comes with a reality check on what exists in 2026."
   - "The Southeast Florida Regional Climate Compact projects 10 to 17 inches of sea-level rise by 2040 and 21 to 54 inches by 2070, versus 2000."

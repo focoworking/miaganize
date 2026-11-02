@@ -6,6 +6,9 @@ updated: "2026-11-02"
 layout: "feature"
 eyebrow: "The company"
 summary: "A select group of publicists, reporters, photographers and content creators united to show Miami at its most brilliant."
+hero_image: "/assets/img/about-hero.webp"
+hero_alt: "Five director’s chairs in a row, each holding a camera, notebooks, a microphone, a phone and a pen."
+hero_position: "center 60%"
 ---
 !! What we are: a bilingual digital luxury magazine, born in Miami in 2026.
 !! Who makes it: publicists, reporters, photographers, filmmakers and content creators.

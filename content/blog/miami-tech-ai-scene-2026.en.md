@@ -7,6 +7,10 @@ date: "2026-11-01"
 excerpt: "Palantir moved in, AI startups raised $1.23B and eMerge jumps to March 2027. Here's what's real in Miami tech right now."
 reading_minutes: 8
 cover_hint: "Dusk over Brickell from a high terrace: laptops and espresso on a marble table in the foreground, glass towers lit behind, a faint reflection of code on the glass railing."
+cover_image: "/assets/img/miami-tech-ai-scene-2026-cover.webp"
+cover_alt: "A closed laptop and an espresso on a marble table on a terrace, city towers in blue bokeh at dusk."
+cover_credit: "AI-generated illustration"
+cover_position: "center 70%"
 tldr:
   - "South Florida startups raised $4.13 billion in venture capital in 2025, up 49% over 2024, per eMerge Insights."
   - "eMerge Americas, Miami's flagship tech conference, moves to March 2–4, 2027, at the Miami Beach Convention Center."
