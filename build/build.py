@@ -167,6 +167,9 @@ def cat_slug(c): return re.sub(r'[^a-z]+', '-', c.lower()).strip('-')
 
 def cover(p, big=False):
     color = CATS[p['category']][0]
+    if p.get('cover_image'):
+        credit = f'<span class="cover-credit">{esc(p.get("cover_credit",""))}</span>' if big and p.get('cover_credit') else ''
+        return f'<div class="cover img{" big" if big else ""}" style="--c:{color}"><img src="{esc(p["cover_image"])}" alt="{esc(p.get("cover_alt",""))}" loading="{"eager" if big else "lazy"}">{credit}</div>'
     word = p['category'].split(' ')[0]
     return f'<div class="cover{" big" if big else ""}" style="--c:{color}"><span class="cover-word">{esc(word)}</span><span class="cover-cat">{esc(cat_label(p["lang"], p["category"]))}</span></div>'
 
@@ -244,6 +247,7 @@ def build_blog(posts):
 <section><div class="wrap"><div class="eyebrow">{t['related']}</div><div class="post-grid" style="margin-top:24px">{rel_html}</div></div></section>
 <script>const pr=document.getElementById('prog');addEventListener('scroll',()=>{{const a=document.querySelector('.post');const r=a.getBoundingClientRect();const tot=a.offsetHeight-innerHeight;pr.style.width=Math.min(100,Math.max(0,-r.top/tot*100))+'%'}},{{passive:true}});
 document.getElementById('copy').onclick=async e=>{{try{{await navigator.clipboard.writeText(location.href);e.target.textContent='{t['copied']}'}}catch(_){{}}}};</script>'''
+            if p.get('cover_image'): extra += f'<meta property="og:image" content="{BASE}{esc(p["cover_image"])}">'
             page(lang, path, alt, f"{p['title']} | MIAGAZINE", p.get('excerpt', ''), body, extra, 'article')
     return posts
 
