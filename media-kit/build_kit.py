@@ -22,11 +22,14 @@ C = {
  goals_t='Launch goals · first 90 days', goals=[('1,500','newsletter subscribers'),('3,000','Instagram followers'),('300','people photographed and tagged'),('25','published stories')],
  goals_note='We are a launching publication: these are targets, not current audited figures. Partners receive real performance reports for every placement.',
  p5_eye='Formats & rates', p5_h='Be seen beautifully.',
- rows=[('Newsletter Sponsor','$150','per issue','Logo, 60 words and one link in The Lens, our Thursday newsletter.'),('Homepage Feature','$250','per week','Featured block on the miagazine.com homepage, EN + ES.'),('MIA Selects','$99','per month','Curated listing in our Miami guide with photos, map and structured data.'),('Branded Story','$650','one-time','Professional shoot by our photographer network + Partner story on web, newsletter and social.'),('Event Coverage','$900','one-time','Photographer at your event, edited gallery, recap story and social posts.'),('Issue Sponsor','$500','per edition','Back cover of our quarterly digital / print-on-demand edition.')],
+ rows=[('Newsletter Sponsor','$150','per issue','Logo, 60 words and one link in The Lens, our Thursday newsletter.'),('Homepage Feature','$250','per week','Featured block on the miagazine.com homepage, EN + ES.'),('MIA Selects','$99','per month','Curated listing in our Miami guide with photos, map and structured data.'),('Branded Story','$650','one-time','Professional shoot by our photographer network + Partner story on web, newsletter and social.'),('Branded Reel','$450','one-time','15–30 s vertical film shot and edited by our filmmakers, published as a collab on Instagram and TikTok; organic usage rights included.'),('Event Coverage','$900','one-time','Photographer at your event, edited gallery, recap story and social posts.'),('Event Recap Film','$1,200','one-time','60–90 s cinematic recap of your event plus 3 vertical cutdowns for social.'),('Issue Sponsor','$500','per edition','Back cover of our quarterly digital / print-on-demand edition.')],
  th=['Format','Rate','Term','What you get'],
- p6_eye='Founding Partner', p6_h='$1,500 / year', p6_sub='Only 10 spots. Rate locked for 12 months.',
- fp=['12 newsletter sponsorships (one per month)','1 Branded Story, professionally photographed','12 months of MIA Selects listing','Logo on our Partners page (EN + ES)','Priority invitations to MIAGAZINE events','Quarterly performance report'],
- fp_val='Equivalent value at standard rates: $3,638',
+ p6_eye='Founding Partner', p6_h='$1,500 / year', p6_sub='Only 10 spots. Rate locked for 12 months. Or 4 quarterly payments of $400.',
+ fp=['12 newsletter sponsorships (one per month)','1 Branded Story, professionally photographed','1 Branded Reel (vertical video)','12 months of MIA Selects listing','Logo on our Partners page (EN + ES)','Priority invitations to MIAGAZINE events','Quarterly performance report'],
+ fp_val='Equivalent value at standard rates: $4,088',
+ b_eye='Event bundles', b_h='Own the moment.', b_sub='Built around Miami’s biggest weeks. Limited to 3 brands per event.', b_val='Standard value', b_book='Book by',
+ bundles=[('Art Week Bundle','$1,200','Nov 30 – Dec 6, 2026',['Event Coverage with edited gallery','1 Branded Reel','2 newsletter features (Art Week issues)','1 homepage week'],'$1,900','Nov 23','miami-art-week-2026-free-guide-cover'),('Art Deco Weekend Bundle','$950','Jan 15–17, 2027',['Branded Story shot around Ocean Drive','1 Branded Reel','1 newsletter feature','1 homepage week'],'$1,500','Jan 8','edition-02-art-deco-at-50-cover'),('Boat Show Bundle','$1,400','Feb 10–14, 2027',['On-water Event Coverage','1 Branded Reel','2 newsletter features (Waterfront issues)','1 homepage week'],'$1,900','Feb 1','best-photo-spots-miami-cover')],
+ s_eye='Example', s_h='This is how your story looks.', s_note='Sample layout with an illustration. Your story is photographed by our network and labeled “Partner”.', s_labels=['Web · Journal','Instagram · collab post','Story · link sticker','Newsletter · The Lens'], s_title='The Omakase Counter Everyone Is Talking About', s_dek='One piece, one beam of light: inside a new tasting menu in Miami.', s_brand='YOUR BRAND', s_cap='Ten seats, one counter and the most precise nigiri in Miami. Our photographer spent an evening behind the scenes.', s_nl='This week: the omakase counter everyone is talking about, five free plans for the weekend and the first Art Week openings.', s_new='New in the Journal', s_read='Read the story', s_paid='Paid partnership with yourbrand', s_pres='Presented by',
  how_t='How a Branded Story works', how=[('Brief','15-minute call: your goal, audience and dates.'),('Shoot','We assign a photographer from our network; you approve the concept.'),('Publish','Story goes live on web, newsletter and social, labeled “Partner”.'),('Report','Reach, clicks and engagement within 14 days.')],
  p7_eye='Editorial & events calendar', p7_h='Where your brand can appear.',
  cal=[('Dec 2026','Art Week Through the Lens','Miami Art Week, Nov 30 – Dec 6 · Art Basel Dec 4–6','Galleries, hotels, fashion, collectibles'),('Jan 2027','Art Deco at 50','Art Deco Weekend, Jan 15–17 · Beaux Arts Festival','Hospitality, vintage, autos, design'),('Feb 2027','Waterfront','Miami International Boat Show, Feb 10–14 · SOBEWFF Feb 25–28','Yachting, real estate, dining, spirits'),('Mar 2027','After Dark','Miami Music Week Mar 22–28 · Ultra Mar 26–28','Nightlife, beverages, fashion, tech'),('Apr 2027','Design & Interiors','Design District season','Furniture, architecture, real estate'),('May 2027','Speed & Style','F1 Miami Grand Prix · Miami Swim Week','Automotive, watches, swimwear, hospitality')],
@@ -34,7 +37,7 @@ C = {
  cal_note='Event dates from official organizers or listings as of November 2026; subject to change.',
  p8_eye='Specs, terms & visibility', p8_h='The details.',
  specs_t='Creative specs', specs=['Logo: SVG or PNG, transparent, min. 1000 px wide','Newsletter copy: up to 60 words + 1 URL (UTM welcome)','Images we receive: JPG/WebP, min. 3000 px long side, with usage rights','Branded Story: we produce all photography; you approve facts, not editorial voice'],
- terms_t='Booking terms', terms=['Payment by secure link (Stripe) to confirm the date','Materials due 7 days before publication','Full refund if cancelled 7+ days before publication','All paid content is labeled “Partner” (FTC Endorsement Guides)','Founding rates valid for contracts signed before Feb 28, 2027'],
+ terms_t='Booking terms', terms=['Payment by secure link (Stripe) to confirm the date','Materials due 7 days before publication','Full refund if cancelled 7+ days before publication','Founding Partner: pay upfront or in 4 quarterly installments','All paid content is labeled “Partner” (FTC Endorsement Guides)','Founding rates valid for contracts signed before Feb 28, 2027'],
  vis_t='Visibility beyond social', vis=['SEO: every Partner story is indexed with structured data (schema.org)','AEO: answers formatted for Google AI Overviews and featured snippets','GEO / LLM: sourced, dated content built to be cited by ChatGPT, Perplexity and Gemini','Bilingual pages double your search footprint (EN + ES)'],
  cta='Let’s create something beautiful.', cta_sub='Book a 15-minute call or reserve a Founding Partner spot.',
  legal='MIAGAZINE · Miami, FL · Rates in USD, valid November 2026 – February 2027. Photographs © their respective authors.'),
@@ -56,11 +59,14 @@ C = {
  goals_t='Metas de lanzamiento · primeros 90 días', goals=[('1,500','suscriptores al newsletter'),('3,000','seguidores en Instagram'),('300','personas fotografiadas y etiquetadas'),('25','historias publicadas')],
  goals_note='Somos una publicación en lanzamiento: son metas, no cifras auditadas actuales. Cada socio recibe un reporte real de resultados por cada publicación.',
  p5_eye='Formatos y tarifas', p5_h='Hazte ver con belleza.',
- rows=[('Patrocinio Newsletter','$150','por envío','Logo, 60 palabras y un link en The Lens, nuestro newsletter de los jueves.'),('Destacado en Home','$250','por semana','Bloque destacado en la portada de miagazine.com, ES + EN.'),('MIA Selects','$99','al mes','Ficha curada en nuestra guía de Miami con fotos, mapa y datos estructurados.'),('Historia de marca','$650','único','Shoot profesional de nuestra red + historia Partner en web, newsletter y redes.'),('Cobertura de evento','$900','único','Fotógrafo en tu evento, galería editada, historia recap y posts en redes.'),('Patrocinio de edición','$500','por edición','Contraportada de la edición trimestral digital / impresa bajo demanda.')],
+ rows=[('Patrocinio Newsletter','$150','por envío','Logo, 60 palabras y un link en The Lens, nuestro newsletter de los jueves.'),('Destacado en Home','$250','por semana','Bloque destacado en la portada de miagazine.com, ES + EN.'),('MIA Selects','$99','al mes','Ficha curada en nuestra guía de Miami con fotos, mapa y datos estructurados.'),('Historia de marca','$650','único','Shoot profesional de nuestra red + historia Partner en web, newsletter y redes.'),('Reel de marca','$450','único','Video vertical de 15–30 s filmado y editado por nuestros filmmakers, publicado como colaboración en Instagram y TikTok; incluye derechos de uso orgánico.'),('Cobertura de evento','$900','único','Fotógrafo en tu evento, galería editada, historia recap y posts en redes.'),('Película recap de evento','$1,200','único','Recap cinematográfico de 60–90 s de tu evento más 3 cortes verticales para redes.'),('Patrocinio de edición','$500','por edición','Contraportada de la edición trimestral digital / impresa bajo demanda.')],
  th=['Formato','Tarifa','Plazo','Qué incluye'],
- p6_eye='Socio Fundador', p6_h='$1,500 / año', p6_sub='Solo 10 cupos. Tarifa congelada por 12 meses.',
- fp=['12 patrocinios de newsletter (uno al mes)','1 historia de marca fotografiada profesionalmente','12 meses de ficha en MIA Selects','Logo en nuestra página de Partners (ES + EN)','Invitaciones prioritarias a eventos MIAGAZINE','Reporte trimestral de resultados'],
- fp_val='Valor equivalente a tarifa estándar: $3,638',
+ p6_eye='Socio Fundador', p6_h='$1,500 / año', p6_sub='Solo 10 cupos. Tarifa congelada por 12 meses. O 4 pagos trimestrales de $400.',
+ fp=['12 patrocinios de newsletter (uno al mes)','1 historia de marca fotografiada profesionalmente','1 Reel de marca (video vertical)','12 meses de ficha en MIA Selects','Logo en nuestra página de Partners (ES + EN)','Invitaciones prioritarias a eventos MIAGAZINE','Reporte trimestral de resultados'],
+ fp_val='Valor equivalente a tarifa estándar: $4,088',
+ b_eye='Paquetes por evento', b_h='Adueñate del momento.', b_sub='Pensados para las semanas más grandes de Miami. Máximo 3 marcas por evento.', b_val='Valor estándar', b_book='Reserva antes del',
+ bundles=[('Paquete Art Week','$1,200','30 nov – 6 dic 2026',['Cobertura de evento con galería editada','1 Reel de marca','2 destacados en newsletter (ediciones de Art Week)','1 semana en la home'],'$1,900','23 nov','miami-art-week-2026-free-guide-cover'),('Paquete Art Deco Weekend','$950','15–17 ene 2027',['Historia de marca fotografiada en Ocean Drive','1 Reel de marca','1 destacado en newsletter','1 semana en la home'],'$1,500','8 ene','edition-02-art-deco-at-50-cover'),('Paquete Boat Show','$1,400','10–14 feb 2027',['Cobertura de evento en el agua','1 Reel de marca','2 destacados en newsletter (ediciones Waterfront)','1 semana en la home'],'$1,900','1 feb','best-photo-spots-miami-cover')],
+ s_eye='Ejemplo', s_h='Así se ve tu historia.', s_note='Diseño de ejemplo con una ilustración. Tu historia la fotografía nuestra red y se etiqueta “Partner”.', s_labels=['Web · Journal','Instagram · post colaborativo','Story · sticker con link','Newsletter · The Lens'], s_title='La barra omakase de la que todos hablan', s_dek='Una pieza, un rayo de luz: así es el nuevo menú degustación que está conquistando Miami.', s_brand='TU MARCA', s_cap='Diez asientos, una barra y el nigiri más preciso de Miami. Nuestro fotógrafo pasó una noche tras bambalinas.', s_nl='Esta semana: la barra omakase de la que todos hablan, cinco planes gratis para el fin de semana y las primeras inauguraciones de Art Week.', s_new='Nuevo en el Journal', s_read='Leer la historia', s_paid='Colaboración pagada con tumarca', s_pres='Presentado por',
  how_t='Cómo funciona una historia de marca', how=[('Brief','Llamada de 15 minutos: objetivo, audiencia y fechas.'),('Shoot','Asignamos un fotógrafo de la red; tú apruebas el concepto.'),('Publicación','La historia sale en web, newsletter y redes, etiquetada “Partner”.'),('Reporte','Alcance, clics e interacción en 14 días.')],
  p7_eye='Calendario editorial y de eventos', p7_h='Dónde puede aparecer tu marca.',
  cal=[('Dic 2026','Art Week a través del lente','Miami Art Week, 30 nov – 6 dic · Art Basel 4–6 dic','Galerías, hoteles, moda, coleccionables'),('Ene 2027','Art Deco at 50','Art Deco Weekend, 15–17 ene · Beaux Arts Festival','Hospitalidad, vintage, autos, diseño'),('Feb 2027','Waterfront','Miami International Boat Show, 10–14 feb · SOBEWFF 25–28 feb','Náutica, real estate, gastronomía, licores'),('Mar 2027','After Dark','Miami Music Week 22–28 mar · Ultra 26–28 mar','Vida nocturna, bebidas, moda, tech'),('Abr 2027','Diseño e Interiores','Temporada del Design District','Mobiliario, arquitectura, real estate'),('May 2027','Speed & Style','F1 Miami Grand Prix · Miami Swim Week','Automotriz, relojes, swimwear, hospitalidad')],
@@ -68,7 +74,7 @@ C = {
  cal_note='Fechas según organizadores oficiales o listados a noviembre de 2026; sujetas a cambios.',
  p8_eye='Especificaciones, términos y visibilidad', p8_h='Los detalles.',
  specs_t='Especificaciones creativas', specs=['Logo: SVG o PNG transparente, mín. 1000 px de ancho','Texto newsletter: hasta 60 palabras + 1 URL (UTM bienvenido)','Imágenes que recibimos: JPG/WebP, mín. 3000 px lado largo, con derechos de uso','Historia de marca: producimos toda la fotografía; tú apruebas datos, no la voz editorial'],
- terms_t='Términos de reserva', terms=['Pago por link seguro (Stripe) para confirmar la fecha','Materiales 7 días antes de la publicación','Reembolso completo si cancelas 7+ días antes','Todo contenido pagado se etiqueta “Partner” (guías de la FTC)','Tarifas fundadoras válidas para contratos firmados antes del 28 feb 2027'],
+ terms_t='Términos de reserva', terms=['Pago por link seguro (Stripe) para confirmar la fecha','Materiales 7 días antes de la publicación','Reembolso completo si cancelas 7+ días antes','Socio Fundador: pago único o en 4 cuotas trimestrales','Todo contenido pagado se etiqueta “Partner” (guías de la FTC)','Tarifas fundadoras válidas para contratos firmados antes del 28 feb 2027'],
  vis_t='Visibilidad más allá de redes', vis=['SEO: cada historia Partner se indexa con datos estructurados (schema.org)','AEO: respuestas preparadas para Google AI Overviews y fragmentos destacados','GEO / LLM: contenido con fuentes y fechas, hecho para ser citado por ChatGPT, Perplexity y Gemini','Páginas bilingües duplican tu presencia en buscadores (ES + EN)'],
  cta='Creemos algo hermoso.', cta_sub='Agenda una llamada de 15 minutos o reserva tu cupo de Socio Fundador.',
  legal='MIAGAZINE · Miami, FL · Tarifas en USD, válidas de noviembre 2026 a febrero 2027. Fotografías © de sus respectivos autores.'),
@@ -187,13 +193,66 @@ td.th2 img{width:1.15in;height:.55in;object-fit:cover;display:block}
 td.th2 .sw{display:block;width:1.15in;height:.55in;background:repeating-linear-gradient(135deg,#ece6dc 0 6px,#f6f3ee 6px 12px)}
 .cta{overflow:hidden}.cta>div{position:relative;z-index:1}
 .cta img.bg{opacity:.28}
+td{padding:.09in .1in !important}
+.bundles{display:grid;grid-template-columns:repeat(3,1fr);gap:.28in}
+.bd{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column}
+.bd .ph{height:1.35in}
+.bdi{padding:.18in .2in;display:flex;flex-direction:column;gap:.06in}
+.bdd{font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.bd h3{font-size:20pt}
+.bdp{font-family:"Cormorant Garamond",serif;font-size:34pt;line-height:1}
+.bd ul{margin:.06in 0}.bd li{list-style:none;font-size:8.5pt;padding:.04in 0;border-bottom:1px solid var(--line)}
+.bdv{font-size:7.5pt;color:var(--muted);letter-spacing:.04em}
+.mock{display:grid;grid-template-columns:2.6fr 1fr 1fr 1.6fr;gap:.25in;align-items:end;margin-top:.05in}
+.mk{display:flex;flex-direction:column;gap:.08in}
+.ml{font-size:7pt;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.m-web{border:1px solid #cfc8bc;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.m-web .bar{display:flex;align-items:center;gap:4px;padding:5px 8px;background:#efebe4;border-bottom:1px solid #ddd6cb}
+.m-web .bar i{width:6px;height:6px;border-radius:50%;background:#cbc3b6}
+.m-web .bar span{margin-left:8px;font-size:6pt;color:var(--muted);background:#fff;padding:1px 8px;border-radius:8px}
+.mw-in{padding:.12in .16in .16in;background:var(--paper)}
+.mw-nav{font-family:"Cormorant Garamond",serif;letter-spacing:.3em;font-size:9pt;font-weight:600;margin-bottom:.08in}
+.mw-in img{width:100%;height:1.55in;object-fit:cover;object-position:center 62%;display:block}
+.mw-chip{display:inline-block;background:#9f1239;color:#fff;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;padding:2px 6px;margin:.08in 0 .04in}
+.mw-t{font-family:"Cormorant Garamond",serif;font-size:17pt;line-height:1.05}
+.mw-d{font-size:7pt;color:var(--muted);margin-top:.04in}
+.m-phone{border:5px solid #111;border-radius:16px;background:#fff;overflow:hidden;height:3.5in;display:flex;flex-direction:column}
+.ig-h{display:flex;gap:5px;align-items:center;padding:6px}
+.ig-h b{width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#b08d57,#0e0e0e);flex:none}
+.ig-h strong{display:block;font-size:6.5pt}.ig-h span{display:block;font-size:5pt;color:var(--muted)}
+.m-phone img.ig{width:100%;height:1.9in;object-fit:cover;object-position:center 62%;display:block}
+.ig-c{font-size:6pt;padding:6px;line-height:1.4}
+.m-phone.st{position:relative}
+.m-phone.st img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.st-o{position:absolute;left:8px;right:8px;top:.3in;color:#fff;display:flex;flex-direction:column;gap:5px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.st-o span{font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase}
+.st-o div{font-family:"Cormorant Garamond",serif;font-size:14pt;line-height:1.05}
+.st-o em{font-style:normal;font-size:6.5pt;background:#fff;color:#111;align-self:flex-start;padding:3px 7px;border-radius:10px;text-shadow:none;margin-top:1.4in}
+.m-mail{background:#fff;border:1px solid #cfc8bc;padding:.14in;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.mm-h{font-family:"Cormorant Garamond",serif;letter-spacing:.3em;font-size:11pt;font-weight:600;text-align:center;border-bottom:1px solid var(--line);padding-bottom:.06in}
+.mm-s{font-size:6pt;text-align:center;color:var(--muted);margin:.06in 0;letter-spacing:.1em;text-transform:uppercase}
+.mm-s b{color:var(--ink);border:1px solid var(--ink);padding:1px 6px;margin-left:3px}
+.m-mail img{width:100%;height:1.05in;object-fit:cover;object-position:center 62%;display:block}
+.mm-t{font-family:"Cormorant Garamond",serif;font-size:12pt;line-height:1.1;margin:.07in 0 .03in}
+.m-mail p{font-size:6.5pt;color:var(--muted)}
+.mm-b{display:inline-block;margin-top:.07in;background:var(--ink);color:#fff;font-size:6pt;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px}
 '''
 
 def li(xs): return ''.join(f'<li>{x}</li>' for x in xs)
 
+def mock(c, pre, ext):
+    im = pre + 'michelin-guide-miami-2026-cover' + ext
+    lb = c['s_labels']
+    return f'''<div class="mock">
+<div class="mk"><div class="m-web"><div class="bar"><i></i><i></i><i></i><span>miagazine.com/blog/omakase</span></div><div class="mw-in"><div class="mw-nav">MIAGAZINE</div><img src="{im}" alt=""><div class="mw-chip">Partner</div><div class="mw-t">{c['s_title']}</div><div class="mw-d">{c['s_dek']}</div></div></div><div class="ml">{lb[0]}</div></div>
+<div class="mk"><div class="m-phone"><div class="ig-h"><b></b><div><strong>miagazine</strong><span>{c['s_paid']}</span></div></div><img class="ig" src="{im}" alt=""><div class="ig-c"><strong>miagazine</strong> {c['s_cap']}</div></div><div class="ml">{lb[1]}</div></div>
+<div class="mk"><div class="m-phone st"><img src="{im}" alt=""><div class="st-o"><span>{c['s_new']}</span><div>{c['s_title']}</div><em>↗ {c['s_read']}</em></div></div><div class="ml">{lb[2]}</div></div>
+<div class="mk"><div class="m-mail"><div class="mm-h">THE LENS</div><div class="mm-s">{c['s_pres']} <b>{c['s_brand']}</b></div><img src="{im}" alt=""><div class="mm-t">{c['s_title']}</div><p>{c['s_nl']}</p><div class="mm-b">{c['s_read']}</div></div><div class="ml">{lb[3]}</div></div>
+</div>'''
+
 def kit(L):
     c = C[L]
-    foot = lambda n: f'<div class="foot"><span class="logo">MIAGAZINE</span><span>{c["kit"]} {c["season"]}</span><span>{n:02d} / 08</span></div>'
+    foot = lambda n: f'<div class="foot"><span class="logo">MIAGAZINE</span><span>{c["kit"]} {c["season"]}</span><span>{n:02d} / 10</span></div>'
     pages = []
     pages.append(f'''<section class="page cover"><img class="bg" src="img/edition-02-art-deco-at-50-cover.jpg" alt=""><div class="art"></div><span class="cr">{c['credit']}</span><div class="in">
 <div class="row"><div class="mast">MIAGAZINE</div><div class="meta">{c['web']}<br>{c['contact']}</div></div>
@@ -213,28 +272,33 @@ def kit(L):
 <div class="goals"><div class="gt">{c['goals_t']}</div>{''.join(f'<div><div class="n">{n}</div><div class="l">{l}</div></div>' for n,l in c['goals'])}<div class="gn">{c['goals_note']}</div></div>{foot(4)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p5_eye']}</div><h2>{c['p5_h']}</h2>
 <table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['th'])}</tr></thead><tbody>{''.join(f'<tr><td class="f">{a}</td><td class="p">{b}</td><td class="t">{t}</td><td>{d}</td></tr>' for a,b,t,d in c['rows'])}</tbody></table>
-<div class="strip">{''.join(f'<figure class="ph"><img src="img/{n}.jpg" alt="" style="object-position:{pos}"></figure>' for n,pos in [('michelin-guide-miami-2026-cover','center 65%'),('miami-modeling-swim-week-guide-cover','center 40%'),('miami-luxury-real-estate-2026-cover','center 60%'),('miami-tech-ai-scene-2026-cover','center 70%'),('best-photo-spots-miami-cover','center 70%')])}</div><p class="crline">{c['credit']}</p>{foot(5)}</section>''')
+{foot(5)}</section>''')
+    pages.append(f'''<section class="page"><div class="eye">{c['b_eye']}</div><h2>{c['b_h']}</h2><p class="lead" style="margin:-.12in 0 .3in">{c['b_sub']}</p>
+<div class="bundles">{''.join(f'<div class="bd"><figure class="ph"><img src="img/{img}.jpg" alt=""></figure><div class="bdi"><div class="bdd">{dt}</div><h3>{n}</h3><div class="bdp">{pr}</div><ul>{li(inc)}</ul><div class="bdv">{c["b_val"]}: <s>{val}</s> · {c["b_book"]} {bk}</div></div></div>' for n,pr,dt,inc,val,bk,img in c['bundles'])}</div>
+<p class="crline">{c['credit']}</p>{foot(6)}</section>''')
+    pages.append(f'''<section class="page"><div class="eye">{c['s_eye']}</div><h2>{c['s_h']}</h2>{mock(c, 'img/', '.jpg')}<p class="note">{c['s_note']}</p>{foot(7)}</section>''')
     pages.append(f'''<section class="page"><div class="fp"><div class="card"><div class="eye">{c['p6_eye']}</div><h2>{c['p6_h']}</h2><div class="sub">{c['p6_sub']}</div><ul>{li(c['fp'])}</ul><div class="val">{c['fp_val']}</div></div>
 <div><div class="eye">{c['how_t']}</div><div class="steps">{''.join(f'<div class="step"><div class="k">{i+1:02d}</div><div><b>{a}</b><span>{b}</span></div></div>' for i,(a,b) in enumerate(c['how']))}</div>
-<figure class="ph" style="height:2.1in;margin-top:.25in"><img src="img/miami-art-week-2026-free-guide-cover.jpg" alt=""><span class="cr">{c['credit']}</span></figure></div></div>{foot(6)}</section>''')
+<figure class="ph" style="height:2.1in;margin-top:.25in"><img src="img/miami-art-week-2026-free-guide-cover.jpg" alt=""><span class="cr">{c['credit']}</span></figure></div></div>{foot(8)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p7_eye']}</div><h2>{c['p7_h']}</h2>
 <table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['cal_th'])}<th></th></tr></thead><tbody>{''.join(f'<tr><td class="m">{m}</td><td class="th">{t}</td><td>{e}</td><td class="t" style="width:2.2in">{f}</td><td class="th2">{('<img src="img/'+img+'-t.jpg" alt="">') if img else '<span class="sw"></span>'}</td></tr>' for (m,t,e,f),img in zip(c['cal'],['miami-art-week-2026-free-guide-cover','edition-02-art-deco-at-50-cover','','','miami-skyline-architecture-2026-cover','']))}</tbody></table>
-<p class="note">{c['cal_note']}</p>{foot(7)}</section>''')
+<p class="note">{c['cal_note']}</p>{foot(9)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p8_eye']}</div><h2>{c['p8_h']}</h2>
 <div class="three"><div><h3>{c['specs_t']}</h3><ul>{li(c['specs'])}</ul></div><div><h3>{c['terms_t']}</h3><ul>{li(c['terms'])}</ul></div><div><h3>{c['vis_t']}</h3><ul>{li(c['vis'])}</ul></div></div>
 <div class="cta"><img class="bg" src="img/newsletter-header.jpg" alt=""><div><h3>{c['cta']}</h3><p>{c['cta_sub']}</p></div><div class="c"><b>{c['contact']}</b><br>{c['web']}<br>@miagazine</div></div>
-<div class="foot"><span>{c['legal']}</span><span>08 / 08</span></div></section>''')
+<div class="foot"><span>{c['legal']}</span><span>10 / 10</span></div></section>''')
     return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>MIAGAZINE {c['kit']} {c['season']}</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body>{''.join(pages)}</body></html>'''
 
-for L in ('en', 'es'):
+if __name__ == '__main__':
+  for L in ('en', 'es'):
     open(os.path.join(D, C[L]['file'] + '.html'), 'w').write(kit(L))
 
-js = r'''const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();
+  js = r'''const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();
 for (const f of %s){const p=await b.newPage();await p.goto('file://'+f+'.html',{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);
 await p.pdf({path:f+'.pdf',width:'11in',height:'8.5in',printBackground:true,preferCSSPageSize:true});
 console.log('ok',f)}
 await b.close()})();''' % json.dumps([os.path.join(D, C[L]['file']) for L in ('en','es')])
-open(os.path.join(D, '_pdf.js'), 'w').write(js)
-subprocess.run(['node', os.path.join(D, '_pdf.js')], check=True)
+  open(os.path.join(D, '_pdf.js'), 'w').write(js)
+  subprocess.run(['node', os.path.join(D, '_pdf.js')], check=True)

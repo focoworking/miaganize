@@ -1,0 +1,20 @@
+{
+  "_help": "Pega aquí tus links reales y corre: python3 build/build.py. Los valores vacíos dejan el placeholder.",
+  "BEEHIIV_FORM_ACTION": "",
+  "TALLY_FORM_URL": "",
+  "CALENDLY_URL": "",
+  "WHATSAPP_URL": "",
+  "STRIPE_NEWSLETTER": "",
+  "STRIPE_HOMEPAGE": "",
+  "STRIPE_SELECTS": "",
+  "STRIPE_STORY": "",
+  "STRIPE_REEL": "",
+  "STRIPE_EVENT": "",
+  "STRIPE_FILM": "",
+  "STRIPE_ISSUE": "",
+  "STRIPE_FOUNDING": "",
+  "STRIPE_FOUNDING_QUARTERLY": "",
+  "STRIPE_BUNDLE_ARTWEEK": "",
+  "STRIPE_BUNDLE_ARTDECO": "",
+  "STRIPE_BUNDLE_BOATSHOW": ""
+}

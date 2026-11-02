@@ -3,7 +3,9 @@
 Usage: python3 build/build.py   -> writes ./site
 """
 import os, re, glob, json, html, shutil, datetime
-import markdown, yaml
+import markdown, yaml, importlib.util
+_spec = importlib.util.spec_from_file_location('build_kit', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'media-kit', 'build_kit.py'))
+KIT = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(KIT)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'site')
@@ -103,7 +105,7 @@ def footer(lang):
     L = lambda en, es: en if lang == 'en' else es
     return f"""<footer><div class="wrap foot-grid">
 <div><span class="logo" style="font-size:18px">MIAGAZINE</span><p class="small">{t['tagline']} {t['footer']}</p></div>
-<div><div class="eyebrow">{L('Magazine','Revista')}</div><a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/stories/')}">{t['stories']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}">{t['advertise']}</a></div>
+<div><div class="eyebrow">{L('Magazine','Revista')}</div><a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/stories/')}">{t['stories']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}">{t['advertise']}</a><a href="{P(lang,'/media-kit.html')}">Media kit</a></div>
 <div><div class="eyebrow">{L('Company','Compañía')}</div><a href="{P(lang,'/about.html')}">{t['about']}</a><a href="{P(lang,'/careers.html')}">{L('Careers','Vacantes')}</a><a href="https://instagram.com/miagazine">Instagram</a></div>
 <div><div class="eyebrow">Legal</div><a href="{P(lang,'/legal/intellectual-property.html')}">{L('IP & Permissions','Propiedad intelectual')}</a><a href="{P(lang,'/legal/privacy.html')}">{L('Privacy','Privacidad')}</a><a href="{P(lang,'/legal/cookies.html')}">Cookies</a><a href="{P(lang,'/legal/terms.html')}">{L('Terms','Términos')}</a><a href="{P(lang,'/legal/editorial-policy.html')}">{L('Editorial policy','Política editorial')}</a><a href="#" data-cookie-prefs>{c['prefs']}</a></div>
 </div><div class="wrap"><p class="small foot-copy">© 2026 MIAGAZINE · Miami, FL · {L('All rights reserved. Photographs © their respective authors.','Todos los derechos reservados. Fotografías © de sus respectivos autores.')}</p></div></footer>
@@ -284,14 +286,20 @@ def build_pages(posts):
 <section><div class="wrap prose"><h2>{L('Rights','Derechos')}</h2><p>{L('You keep your copyright. By submitting, you grant MIAGAZINE a non-exclusive license to publish your images with credit on our website, newsletter, social channels, quarterly issues and promotion. Any commercial use by a third-party brand requires your separate agreement and payment.','Conservas tu copyright. Al enviar, das a MIAGAZINE una licencia no exclusiva para publicar tus imágenes con crédito en web, newsletter, redes, ediciones trimestrales y promoción. Cualquier uso comercial de una marca requiere tu acuerdo aparte y pago.')}</p><p>{L('We reply to every submission within 48 hours.','Respondemos cada envío en 48 horas.')}</p></div></section>'''
         page(lang, P(lang, '/submit.html'), P(o, '/submit.html'), L('Submit Your Work — Open Call for Miami Photographers | MIAGAZINE','Publica tu trabajo — Convocatoria para fotógrafos de Miami | MIAGAZINE'), L('Open call for Miami photographers: free to submit, full credit, 20% partner commission.','Convocatoria para fotógrafos de Miami: envío gratis, crédito completo, 20% de comisión.'), submit)
 
-        rows = L([('Newsletter Sponsor','$150','per issue','Logo, 60 words and one link in The Lens.'),('Homepage Feature','$250','per week','Featured block on the homepage.'),('MIA Selects','$99','per month','Listing in our curated Miami guide.'),('Branded Story','$650','one-time','Professional shoot, Partner story, newsletter and social.'),('Event Coverage','$900','one-time','Photographer at your event, gallery and recap.'),('Issue Sponsor','$500','per issue','Back cover of the quarterly edition.'),('Founding Partner','$1,500','per year · 10 spots','12 newsletter slots, 1 Branded Story, 12 months of MIA Selects, logo on Partners page.')],
-                 [('Patrocinio Newsletter','$150','por envío','Logo, 60 palabras y un link en The Lens.'),('Destacado en Home','$250','por semana','Bloque destacado en la portada.'),('MIA Selects','$99','al mes','Ficha en nuestra guía curada de Miami.'),('Historia de marca','$650','único','Shoot profesional, historia Partner, newsletter y redes.'),('Cobertura de evento','$900','único','Fotógrafo en tu evento, galería y recap.'),('Patrocinio de edición','$500','por edición','Contraportada de la edición trimestral.'),('Socio Fundador','$1,500','al año · 10 cupos','12 envíos de newsletter, 1 historia de marca, 12 meses de MIA Selects, logo en Partners.')])
-        tr = ''.join(f'<tr><td><strong>{a}</strong><br><span class="small">{d}</span></td><td class="price">{b}</td><td class="small">{c}</td><td><a class="btn ghost" href="STRIPE_LINK_{i}">{L("Book","Reservar")}</a></td></tr>' for i,(a,b,c,d) in enumerate(rows,1))
+        K = KIT.C[lang]
+        keys = ['STRIPE_NEWSLETTER','STRIPE_HOMEPAGE','STRIPE_SELECTS','STRIPE_STORY','STRIPE_REEL','STRIPE_EVENT','STRIPE_FILM','STRIPE_ISSUE']
+        tr = ''.join(f'<tr><td><strong>{a}</strong><br><span class="small">{d}</span></td><td class="price">{b}</td><td class="small">{c}</td><td><a class="btn ghost" href="{k}">{L("Book","Reservar")}</a></td></tr>' for (a,b,c,d),k in zip(K['rows'], keys))
+        bkeys = ['STRIPE_BUNDLE_ARTWEEK','STRIPE_BUNDLE_ARTDECO','STRIPE_BUNDLE_BOATSHOW']
+        bundles_html = ''.join(f'<article class="bundle"><img src="/assets/img/{img}-sm.webp" alt="" loading="lazy"><div class="bi"><div class="eyebrow">{dt}</div><h3>{n}</h3><div class="bp">{pr}</div><ul>{"".join(f"<li>{x}</li>" for x in inc)}</ul><p class="small">{K["b_val"]}: <s>{val}</s> · {K["b_book"]} {bk}</p><a class="btn" href="{k}">{L("Book","Reservar")}</a></div></article>' for (n,pr,dt,inc,val,bk,img),k in zip(K['bundles'], bkeys))
+        founding_html = f'<div class="founding"><div><div class="eyebrow" style="color:#e8cfa6">{K["p6_eye"]}</div><h2>{K["p6_h"]}</h2><p>{K["p6_sub"]}</p><ul>{"".join(f"<li>{x}</li>" for x in K["fp"])}</ul><p class="small">{K["fp_val"]}</p></div><div class="ctas" style="flex-direction:column;align-items:stretch"><a class="btn light" href="STRIPE_FOUNDING">{L("Pay $1,500 / year","Pagar $1,500 / año")}</a><a class="btn light" href="STRIPE_FOUNDING_QUARTERLY">{L("4 × $400 quarterly","4 × $400 trimestral")}</a><a class="btn light" href="CALENDLY_URL">{L("Book a 15-min call","Agendar llamada de 15 min")}</a></div></div>'
         adv = f'''<div class="hero wrap"><div class="eyebrow">{L('Partners · Founding rates','Socios · Tarifas fundadoras')}</div><h1>{L('Be seen beautifully.','Hazte ver con belleza.')}</h1><p>{L('MIAGAZINE puts Miami brands in front of an affluent, bilingual, design-minded audience — through photography, not banners.','MIAGAZINE pone a las marcas de Miami frente a una audiencia bilingüe, de alto poder adquisitivo y amante del diseño, con fotografía, no con banners.')}</p></div>
-<section><div class="wrap"><div class="answer" style="margin-bottom:32px"><strong>{L('How much does it cost to advertise in MIAGAZINE?','¿Cuánto cuesta anunciarse en MIAGAZINE?')}</strong> {L('Founding rates start at $150 per newsletter sponsorship, $99/month for a guide listing and $650 for a photographed brand story. Ten Founding Partner spots are available at $1,500 per year.','Las tarifas fundadoras empiezan en $150 por patrocinio de newsletter, $99/mes por ficha en la guía y $650 por historia de marca fotografiada. Hay 10 cupos de Socio Fundador a $1,500 al año.')}</div>
-<div class="table-wrap"><table><thead><tr><th>{L('Package','Paquete')}</th><th>{L('Rate','Tarifa')}</th><th>{L('Term','Plazo')}</th><th></th></tr></thead><tbody>{tr}</tbody></table></div>
+<section><div class="wrap"><div class="answer" style="margin-bottom:32px"><strong>{L('How much does it cost to advertise in MIAGAZINE?','¿Cuánto cuesta anunciarse en MIAGAZINE?')}</strong> {L('Founding rates start at $150 per newsletter sponsorship, $99/month for a guide listing, $450 for a Branded Reel and $650 for a photographed brand story. Event bundles start at $950. Ten Founding Partner spots are available at $1,500 per year or 4 quarterly payments of $400.','Las tarifas fundadoras empiezan en $150 por patrocinio de newsletter, $99/mes por ficha en la guía, $450 por Reel de marca y $650 por historia de marca fotografiada. Los paquetes por evento empiezan en $950. Hay 10 cupos de Socio Fundador a $1,500 al año o 4 pagos trimestrales de $400.')}</div>
+<div class="ctas" style="justify-content:flex-start;margin:0 0 28px"><a class="btn" href="{P(lang,'/media-kit.html')}">{L('View the media kit','Ver el media kit')}</a><a class="btn ghost" href="/media-kit/MIAGAZINE-Media-Kit-2026-{'EN' if lang=='en' else 'ES'}.pdf">{L('Download PDF','Descargar PDF')}</a><a class="btn ghost" href="CALENDLY_URL">{L('Book a call','Agendar llamada')}</a></div>
+<div class="table-wrap"><table><thead><tr><th>{L('Package','Paquete')}</th><th>{L('Rate','Tarifa')}</th><th>{L('Term','Plazo')}</th><th></th></tr></thead><tbody>{tr}</tbody></table></div></div></section>
+<section><div class="wrap"><div class="eyebrow">{K['b_eye']}</div><h2>{K['b_h']}</h2><p class="small" style="margin:-12px 0 28px">{K['b_sub']}</p><div class="bundles">{bundles_html}</div></div></section>
+<section class="dark"><div class="wrap">{founding_html}
 <p class="small" style="margin-top:18px">{L('All paid content is labeled “Partner”. Questions: partners@miagazine.com','Todo contenido pagado se etiqueta “Partner”. Preguntas: partners@miagazine.com')}</p></div></section>'''
-        page(lang, P(lang, '/advertise.html'), P(o, '/advertise.html'), L('Advertise in a Miami Luxury Magazine — Founding Rates | MIAGAZINE','Anúnciate en una revista de lujo de Miami — Tarifas fundadoras | MIAGAZINE'), L('Newsletter sponsorships from $150, branded photo stories, event coverage and Founding Partner packages.','Patrocinios de newsletter desde $150, historias de marca fotografiadas, cobertura de eventos y paquetes de Socio Fundador.'), adv)
+        page(lang, P(lang, '/advertise.html'), P(o, '/advertise.html'), L('Advertise in a Miami Luxury Magazine — Founding Rates | MIAGAZINE','Anúnciate en una revista de lujo de Miami — Tarifas fundadoras | MIAGAZINE'), L('Newsletter sponsorships from $150, Branded Reels, photographed brand stories, event coverage, event bundles and Founding Partner packages.','Patrocinios de newsletter desde $150, Reels de marca, historias fotografiadas, cobertura de eventos, paquetes por evento y Socio Fundador.'), adv)
 
         page(lang, P(lang, '/404.html'), P(o, '/404.html'), '404 — MIAGAZINE', 'Not found', f'<div class="hero wrap"><h1>{L("Out of frame.","Fuera de cuadro.")}</h1><p><a href="{t["home"]}">MIAGAZINE</a></p></div>')
 
@@ -361,10 +369,46 @@ def build_content_pages():
         page(lang, P(lang, '/legal/'), P(o, '/legal/'), f"{L('Legal center','Centro legal')} | MIAGAZINE", L('Intellectual property, permissions, privacy, cookies, terms and editorial policy.','Propiedad intelectual, permisos, privacidad, cookies, términos y política editorial.'), hub)
     return pages
 
+def build_media_kit_page():
+    for lang in ('en','es'):
+        K = KIT.C[lang]; o = 'es' if lang == 'en' else 'en'; L = lambda en, es: en if lang == 'en' else es
+        pdf = f"/media-kit/MIAGAZINE-Media-Kit-2026-{'EN' if lang=='en' else 'ES'}.pdf"
+        stats = ''.join(f'<div class="mk-stat"><div class="n">{n}</div><div>{l}</div><span>{s_}</span></div>' for n,l,s_ in K['stats'])
+        pill = ''.join(f'<div><h3>{a}</h3><p>{b}</p></div>' for a,b in K['pillars'])
+        ch = ''.join(f'<li><strong>{a}</strong> — {b}</li>' for a,b in K['ch'])
+        goals = ''.join(f'<div><b>{n}</b><span>{l}</span></div>' for n,l in K['goals'])
+        rows = ''.join(f'<tr><td><strong>{a}</strong><br><span class="small">{d}</span></td><td class="price">{b}</td><td class="small">{c}</td></tr>' for a,b,c,d in K['rows'])
+        bund = ''.join(f'<article class="bundle"><img src="/assets/img/{img}-sm.webp" alt="" loading="lazy"><div class="bi"><div class="eyebrow">{dt}</div><h3>{n}</h3><div class="bp">{pr}</div><ul>{"".join(f"<li>{x}</li>" for x in inc)}</ul><p class="small">{K["b_val"]}: <s>{val}</s> · {K["b_book"]} {bk}</p></div></article>' for n,pr,dt,inc,val,bk,img in K['bundles'])
+        cal = ''.join(f'<tr><td class="price" style="font-size:20px">{m}</td><td><strong>{t}</strong></td><td>{e}</td><td class="small">{f}</td></tr>' for m,t,e,f in K['cal'])
+        body = f'''<div class="mk-hero"><img src="/assets/img/edition-02-art-deco-at-50-cover.webp" alt=""><div class="wrap"><div class="eyebrow" style="color:#f2d8ae">MIAGAZINE · {K['kit']} {K['season']}</div><h1>{K['kit']}</h1><p>{K['tag']} {K['founding']}</p>
+<div class="ctas" style="justify-content:flex-start"><a class="btn light" href="CALENDLY_URL">{L('Book a 15-min call','Agendar llamada de 15 min')}</a><a class="btn light" href="{pdf}">{L('Download PDF','Descargar PDF')}</a></div></div><small>{K['credit']}</small></div>
+<section><div class="wrap split"><div><div class="eyebrow">{K['p2_eye']}</div><h2>{K['p2_h']}</h2><p>{K['p2_p']}</p></div><div class="mk-pill">{pill}</div></div></section>
+<section><div class="wrap"><div class="eyebrow">{K['p3_eye']}</div><h2>{K['p3_h']}</h2><div class="mk-stats">{stats}</div><p class="small">{K['p3_note']}</p></div></section>
+<section><div class="wrap split"><div><div class="eyebrow">{K['p4_eye']}</div><h2>{K['p4_h']}</h2><ul class="list">{"".join(f"<li>{x}</li>" for x in K['aud'])}</ul></div><div><ul class="list">{ch}</ul></div></div>
+<div class="wrap"><div class="mk-goals"><div class="eyebrow" style="color:#e8cfa6">{K['goals_t']}</div><div class="g">{goals}</div><p>{K['goals_note']}</p></div></div></section>
+<section><div class="wrap"><div class="eyebrow">{K['p5_eye']}</div><h2>{K['p5_h']}</h2><div class="table-wrap"><table><tbody>{rows}</tbody></table></div></div></section>
+<section><div class="wrap"><div class="eyebrow">{K['b_eye']}</div><h2>{K['b_h']}</h2><p class="small" style="margin:-12px 0 28px">{K['b_sub']}</p><div class="bundles">{bund}</div></div></section>
+<section><div class="wrap"><div class="eyebrow">{K['s_eye']}</div><h2>{K['s_h']}</h2><div class="mock-web">{KIT.mock(K, '/assets/img/', '-sm.webp')}</div><p class="small">{K['s_note']}</p></div></section>
+<section class="dark"><div class="wrap">{'<div class="founding"><div><div class="eyebrow" style="color:#e8cfa6">'+K['p6_eye']+'</div><h2>'+K['p6_h']+'</h2><p>'+K['p6_sub']+'</p><ul>'+''.join(f"<li>{x}</li>" for x in K['fp'])+'</ul><p class="small">'+K['fp_val']+'</p></div><div><div class="eyebrow" style="color:#e8cfa6">'+K['how_t']+'</div><ol class="how">'+''.join(f"<li><strong>{a}</strong> {b}</li>" for a,b in K['how'])+'</ol></div></div>'}</div></section>
+<section><div class="wrap"><div class="eyebrow">{K['p7_eye']}</div><h2>{K['p7_h']}</h2><div class="table-wrap"><table><tbody>{cal}</tbody></table></div><p class="small">{K['cal_note']}</p></div></section>
+<section><div class="wrap three-col"><div><h3>{K['specs_t']}</h3><ul class="list">{"".join(f"<li>{x}</li>" for x in K['specs'])}</ul></div><div><h3>{K['terms_t']}</h3><ul class="list">{"".join(f"<li>{x}</li>" for x in K['terms'])}</ul></div><div><h3>{K['vis_t']}</h3><ul class="list">{"".join(f"<li>{x}</li>" for x in K['vis'])}</ul></div></div></section>
+<section class="cta-band"><div class="wrap"><h2>{K['cta']}</h2><p class="small">{K['cta_sub']}</p><div class="ctas"><a class="btn light" href="CALENDLY_URL">{L('Book a call','Agendar llamada')}</a><a class="btn light" href="mailto:partners@miagazine.com">partners@miagazine.com</a><a class="btn light" href="WHATSAPP_URL">WhatsApp</a></div></div></section>'''
+        page(lang, P(lang,'/media-kit.html'), P(o,'/media-kit.html'), f"{K['kit']} {K['season']} | MIAGAZINE", L('MIAGAZINE media kit: audience, formats and rates, Branded Reels, event bundles for Art Week, Art Deco Weekend and the Boat Show, and Founding Partner offer.','Media kit de MIAGAZINE: audiencia, formatos y tarifas, Reels de marca, paquetes para Art Week, Art Deco Weekend y Boat Show, y oferta de Socio Fundador.'), body)
+
+def apply_integrations():
+    cfg = os.path.join(ROOT, 'config', 'integrations.json')
+    if not os.path.exists(cfg): return
+    vals = {k: v for k, v in json.load(open(cfg)).items() if not k.startswith('_') and v}
+    if not vals: return
+    for f in glob.glob(os.path.join(OUT, '**/*.html'), recursive=True):
+        h = open(f).read(); n = h
+        for k, v in sorted(vals.items(), key=lambda kv: -len(kv[0])): n = n.replace(k, v)
+        if n != h: open(f, 'w').write(n)
+
 def build_meta(posts):
     urls = []
     for lang in ('en','es'):
-        for p in ['/', '/stories/', '/submit.html', '/advertise.html', '/about.html', '/careers.html', '/legal/'] + [f'/legal/{x}.html' for x in LEGAL_ORDER]: urls.append((P(lang,p), TODAY))
+        for p in ['/', '/stories/', '/submit.html', '/advertise.html', '/media-kit.html', '/about.html', '/careers.html', '/legal/'] + [f'/legal/{x}.html' for x in LEGAL_ORDER]: urls.append((P(lang,p), TODAY))
         urls.append((T[lang]['journal_url'], TODAY))
         for x in posts[lang]: urls.append((T[lang]['journal_url']+x['slug']+'.html', x['date']))
     urls += [('/stories/golden-hour-key-biscayne.html', TODAY), ('/guides/miami-art-week-2026.html', TODAY)]
@@ -372,9 +416,9 @@ def build_meta(posts):
     write('/sitemap.xml', sm)
     lines = ['# MIAGAZINE', '', '> MIAGAZINE is a bilingual (English/Spanish) digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials by a curated network of Miami photographers and a researched, sourced Journal on fashion & models, real estate, economy, music, trends, food & drink, tech, waterfront, design & architecture and photography, plus a free weekly newsletter, The Lens (Thursdays).', '',
              'Key facts:', '- Coverage: Miami and South Florida: luxury, events, nightlife, public events, art, fashion, real estate, economy, music, tech.', '- Team: a select collective of publicists, reporters, photographers, filmmakers and content creators. Open positions by appointment only (careers page).', '- Photographers submit for free, keep copyright, get full credit and earn 20% on partnerships they refer.',
-             '- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects listing $99/month, Branded Story $650, Event Coverage $900, Founding Partner $1,500/year.',
+             '- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects listing $99/month, Branded Reel $450, Branded Story $650, Event Coverage $900, Event Recap Film $1,200, event bundles from $950, Founding Partner $1,500/year or 4 x $400.',
              '- Editorial policy: real photography only; paid content labeled "Partner"; speculative pieces labeled as fiction.', '',
-             '## Main pages', f'- [Home]({BASE}/)', f'- [Inicio (ES)]({BASE}/es/)', f'- [Submit]({BASE}/submit.html)', f'- [Advertise]({BASE}/advertise.html)', f'- [About]({BASE}/about.html)', f'- [Careers]({BASE}/careers.html)', f'- [Legal center]({BASE}/legal/)', f'- [Intellectual property & permissions]({BASE}/legal/intellectual-property.html)', f'- [Editorial policy]({BASE}/legal/editorial-policy.html)', '', '## Journal (English)']
+             '## Main pages', f'- [Home]({BASE}/)', f'- [Inicio (ES)]({BASE}/es/)', f'- [Submit]({BASE}/submit.html)', f'- [Advertise]({BASE}/advertise.html)', f'- [Media kit]({BASE}/media-kit.html)', f'- [About]({BASE}/about.html)', f'- [Careers]({BASE}/careers.html)', f'- [Legal center]({BASE}/legal/)', f'- [Intellectual property & permissions]({BASE}/legal/intellectual-property.html)', f'- [Editorial policy]({BASE}/legal/editorial-policy.html)', '', '## Journal (English)']
     lines += [f"- [{x['title']}]({BASE}/blog/{x['slug']}.html): {x.get('excerpt','')}" for x in posts['en']]
     lines += ['', '## Journal (Español)'] + [f"- [{x['title']}]({BASE}/es/blog/{x['slug']}.html): {x.get('excerpt','')}" for x in posts['es']]
     write('/llms.txt', '\n'.join(lines) + '\n')
@@ -390,5 +434,5 @@ def refresh_legacy():
 
 if __name__ == '__main__':
     posts = load_posts(); refresh_legacy()
-    build_blog(posts); build_pages(posts); build_content_pages(); build_meta(posts)
+    build_blog(posts); build_pages(posts); build_content_pages(); build_media_kit_page(); build_meta(posts); apply_integrations()
     print('posts en/es:', len(posts['en']), len(posts['es']))

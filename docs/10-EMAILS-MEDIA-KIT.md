@@ -1,6 +1,8 @@
 # Emails para enviar el media kit a marcas
 
-Plantillas listas para copiar o para mail merge (`outreach/emails-media-kit.csv`). Cada email existe en **EN** y **ES**. Adjuntar el PDF del idioma correspondiente: `media-kit/MIAGAZINE-Media-Kit-2026-EN.pdf` o `-ES.pdf`.
+Plantillas listas para copiar o para mail merge (`outreach/emails-media-kit.csv`). Cada email existe en **EN** y **ES**.
+
+**Regla nueva: el primer email NO lleva adjunto** (los adjuntos en correos fríos caen en spam). Se envía el link miagazine.com/media-kit (ES: /es/media-kit). El PDF (`media-kit/MIAGAZINE-Media-Kit-2026-EN.pdf` o `-ES.pdf`) se envía solo cuando la marca responde con interés (ver Respuestas).
 
 ## Cómo usarlas
 
@@ -20,7 +22,7 @@ Plantillas listas para copiar o para mail merge (`outreach/emails-media-kit.csv`
 
 | Día | Email | Nota |
 |---|---|---|
-| 0 | Email 1 del **segmento** (o el General) + PDF adjunto | Martes a jueves, 9–11 am hora de Miami |
+| 0 | Email 1 del **segmento** (o el General) con link al media kit, sin adjunto | Martes a jueves, 9–11 am hora de Miami |
 | 3 | Seguimiento (responder en el mismo hilo) | Sin adjunto |
 | 7 | Urgencia (cupos reales) | Solo si es verdad |
 | 14 | Cierre | Después, pausa 60 días |
@@ -51,7 +53,7 @@ Hi {{first_name}},
 
 We're launching MIAGAZINE, a bilingual visual luxury magazine made by Miami photographers, during Miami Art Week (Dec 4–6). We're opening 10 Founding Partner spots: a full year of presence — weekly newsletter, a professionally photographed story about {{company}} and a listing in our Miami guide — for $1,500.
 
-Media kit attached (8 pages). Formats start at $150.
+Media kit: miagazine.com/media-kit — formats start at $150, video included.
 
 Would a 15-minute call this week make sense?
 
@@ -75,7 +77,7 @@ Hola {{first_name}}:
 
 Estamos lanzando MIAGAZINE, una revista visual de lujo bilingüe hecha por fotógrafos de Miami, durante Miami Art Week (4–6 dic). Abrimos 10 cupos de Socio Fundador: un año completo de presencia (newsletter semanal, una historia fotografiada profesionalmente sobre {{company}} y una ficha en nuestra guía de Miami) por $1,500.
 
-Te adjunto el media kit (8 páginas). Los formatos empiezan en $150.
+Media kit: miagazine.com/es/media-kit. Los formatos empiezan en $150 e incluyen video.
 
 ¿Te sirve una llamada de 15 minutos esta semana?
 
@@ -95,7 +97,7 @@ miagazine.com/es · @miagazine
 ```
 Hi {{first_name}},
 
-Quick follow-up on the media kit. One idea for {{company}}: a Branded Story ($650) — our photographer shoots {{company}}, we publish it on web, newsletter and social in English and Spanish, and you get a performance report in 14 days.
+Quick follow-up on the media kit (miagazine.com/media-kit). One idea for {{company}}: a Branded Story ($650) — our photographer shoots {{company}}, we publish it on web, newsletter and social in English and Spanish, and you get a performance report in 14 days.
 
 Want me to send two concept options?
 
@@ -115,7 +117,7 @@ Not interested? Reply "no thanks" and we won't email you again.
 ```
 Hola {{first_name}}:
 
-Sigo con lo del media kit. Una idea para {{company}}: una Historia de marca ($650). Nuestro fotógrafo hace el shoot, la publicamos en web, newsletter y redes en español e inglés, y recibes un reporte de resultados en 14 días.
+Sigo con lo del media kit (miagazine.com/es/media-kit). Una idea para {{company}}: una Historia de marca ($650). Nuestro fotógrafo hace el shoot, la publicamos en web, newsletter y redes en español e inglés, y recibes un reporte de resultados en 14 días.
 
 ¿Te mando dos propuestas de concepto?
 
@@ -223,7 +225,7 @@ Art Week brings the world to Miami Beach for one week — and most of it is look
 
 MIAGAZINE is a new bilingual visual luxury magazine made by Miami photographers. We'd love to feature {{company}} in our Art Week edition: an editorial shoot on property, a story in English and Spanish, our Thursday newsletter and social coverage.
 
-Media kit attached. Founding Partner: $1,500/year (10 spots). Event Coverage: $900.
+Media kit: miagazine.com/media-kit Art Week Bundle: $1,200 (event coverage, a Reel, 2 newsletters and a homepage week — limited to 3 brands). Founding Partner: $1,500/year or 4 × $400.
 
 Open to a 15-minute call?
 
@@ -247,7 +249,7 @@ Art Week trae al mundo a Miami Beach por una semana, y casi todos buscan dónde 
 
 MIAGAZINE es una nueva revista visual de lujo bilingüe hecha por fotógrafos de Miami. Nos encantaría incluir a {{company}} en nuestra edición de Art Week: un shoot editorial en la propiedad, una historia en español e inglés, el newsletter de los jueves y cobertura en redes.
 
-Te adjunto el media kit. Socio Fundador: $1,500/año (10 cupos). Cobertura de evento: $900.
+Media kit: miagazine.com/es/media-kit Paquete Art Week: $1,200 (cobertura, un Reel, 2 newsletters y una semana en la home; máximo 3 marcas). Socio Fundador: $1,500/año o 4 × $400.
 
 ¿Hablamos 15 minutos?
 
@@ -275,7 +277,7 @@ We just published our guide to Michelin in Miami, and {{company}} is the kind of
 
 MIAGAZINE is a new bilingual visual luxury magazine. For restaurants we offer a listing in our curated Miami guide (MIA Selects, $99/month) and photographed Branded Stories ($650) — one beautiful image of your best dish can travel further than a month of ads.
 
-Media kit attached. Can I send you a concept?
+Media kit: miagazine.com/media-kit Can I send you a concept?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -297,7 +299,7 @@ Acabamos de publicar nuestra guía Michelin de Miami, y {{company}} es justo el 
 
 MIAGAZINE es una nueva revista visual de lujo bilingüe. Para restaurantes ofrecemos una ficha en nuestra guía curada de Miami (MIA Selects, $99/mes) e Historias de marca fotografiadas ($650): una imagen hermosa de tu mejor plato llega más lejos que un mes de anuncios.
 
-Te adjunto el media kit. ¿Te mando un concepto?
+Media kit: miagazine.com/es/media-kit ¿Te mando un concepto?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -323,7 +325,7 @@ Our Journal just covered Miami's luxury market in 2026 — branded residences, f
 
 MIAGAZINE reaches bilingual, high-net-worth readers in English and Spanish, with stories built to rank on Google and to be cited by AI search. For {{company}} we'd suggest an architectural Branded Story ($650) plus newsletter placements, or a Founding Partner year ($1,500).
 
-Media kit attached. Worth a short call?
+Media kit: miagazine.com/media-kit Worth a short call?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -345,7 +347,7 @@ Nuestro Journal acaba de publicar el panorama del lujo inmobiliario en Miami 202
 
 MIAGAZINE llega a lectores bilingües de alto poder adquisitivo en español e inglés, con historias hechas para posicionar en Google y ser citadas por buscadores de IA. Para {{company}} proponemos una Historia de marca arquitectónica ($650) más envíos de newsletter, o un año de Socio Fundador ($1,500).
 
-Te adjunto el media kit. ¿Vale una llamada corta?
+Media kit: miagazine.com/es/media-kit ¿Vale una llamada corta?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -369,9 +371,9 @@ Hi {{first_name}},
 
 MIAGAZINE is a new bilingual visual luxury magazine made by Miami's fashion photographers. Our next editions are Art Week (December) and Art Deco at 50 (January) — both natural stages for {{company}}.
 
-Idea: a Branded Story ($650) shot on location with our network — styled, credited and published on web, newsletter and Instagram, labeled Partner. We can also cover a launch or trunk show ($900).
+Idea: a Branded Story ($650) shot on location with our network — styled, credited and published on web, newsletter and Instagram, labeled Partner. We can also film a Branded Reel ($450) or cover a launch ($900).
 
-Media kit attached. Shall I send a moodboard?
+Media kit: miagazine.com/media-kit Shall I send a moodboard?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -391,9 +393,9 @@ Hola {{first_name}}:
 
 MIAGAZINE es una nueva revista visual de lujo bilingüe hecha por fotógrafos de moda de Miami. Nuestras próximas ediciones son Art Week (diciembre) y Art Deco at 50 (enero), escenarios naturales para {{company}}.
 
-Idea: una Historia de marca ($650) fotografiada en locación con nuestra red, con estilismo, créditos y publicada en web, newsletter e Instagram, etiquetada Partner. También podemos cubrir un lanzamiento o trunk show ($900).
+Idea: una Historia de marca ($650) fotografiada en locación con nuestra red, con estilismo, créditos y publicada en web, newsletter e Instagram, etiquetada Partner. También podemos filmar un Reel de marca ($450) o cubrir un lanzamiento ($900).
 
-Te adjunto el media kit. ¿Te mando un moodboard?
+Media kit: miagazine.com/es/media-kit ¿Te mando un moodboard?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -419,7 +421,7 @@ During Miami Art Week our photographers will be covering fairs, openings and pub
 
 We'd like to include {{company}}: Event Coverage of your opening ($900 — photographer, edited gallery and recap story) or a newsletter feature in our Art Week issues ($150). Our free Art Week guide is already live on the Journal.
 
-Media kit attached. Can we put your opening on our calendar?
+Media kit: miagazine.com/media-kit Can we put your opening on our calendar?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -441,7 +443,7 @@ Durante Miami Art Week nuestros fotógrafos cubrirán ferias, inauguraciones y p
 
 Nos gustaría incluir a {{company}}: cobertura de tu inauguración ($900: fotógrafo, galería editada e historia recap) o un destacado en los newsletters de Art Week ($150). Nuestra guía gratuita de Art Week ya está publicada en el Journal.
 
-Te adjunto el media kit. ¿Ponemos tu inauguración en nuestro calendario?
+Media kit: miagazine.com/es/media-kit ¿Ponemos tu inauguración en nuestro calendario?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -465,9 +467,9 @@ Hi {{first_name}},
 
 Our February edition, Waterfront, is built around the Miami International Boat Show (Feb 10–14, 2027) and the bay itself.
 
-For {{company}} we'd propose an aerial and on-deck Branded Story ($650) or a Founding Partner year ($1,500) that covers Waterfront and our May "Speed & Style" edition (F1 Miami). Bilingual, photographed, built to be found on Google and AI search.
+For {{company}} we'd propose the Boat Show Bundle ($1,400: on-water coverage, a Reel, 2 newsletters, homepage week) or a Founding Partner year ($1,500) that covers Waterfront and our May "Speed & Style" edition (F1 Miami). Bilingual, photographed, built to be found on Google and AI search.
 
-Media kit attached. Interested in early placement?
+Media kit: miagazine.com/media-kit Interested in early placement?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -487,9 +489,9 @@ Hola {{first_name}}:
 
 Nuestra edición de febrero, Waterfront, gira en torno al Miami International Boat Show (10–14 feb 2027) y la bahía.
 
-Para {{company}} proponemos una Historia de marca aérea y a bordo ($650) o un año de Socio Fundador ($1,500) que cubre Waterfront y nuestra edición de mayo "Speed & Style" (F1 Miami). Bilingüe, fotografiada y hecha para aparecer en Google y en buscadores de IA.
+Para {{company}} proponemos el Paquete Boat Show ($1,400: cobertura en el agua, un Reel, 2 newsletters y una semana en la home) o un año de Socio Fundador ($1,500) que cubre Waterfront y nuestra edición de mayo "Speed & Style" (F1 Miami). Bilingüe, fotografiada y hecha para aparecer en Google y en buscadores de IA.
 
-Te adjunto el media kit. ¿Te interesa reservar temprano?
+Media kit: miagazine.com/es/media-kit ¿Te interesa reservar temprano?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -515,7 +517,7 @@ Our Journal piece on luxury trends for 2027 puts wellness and longevity at the c
 
 MIAGAZINE can feature {{company}} with a calm, minimal Branded Story ($650) and a listing in our curated Miami guide ($99/month), in English and Spanish, clearly labeled Partner.
 
-Media kit attached. Open to a short call?
+Media kit: miagazine.com/media-kit Open to a short call?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -537,7 +539,7 @@ Nuestro artículo sobre tendencias de lujo 2027 pone el bienestar y la longevida
 
 MIAGAZINE puede presentar a {{company}} con una Historia de marca serena y minimalista ($650) y una ficha en nuestra guía curada de Miami ($99/mes), en español e inglés, etiquetada Partner.
 
-Te adjunto el media kit. ¿Hablamos un momento?
+Media kit: miagazine.com/es/media-kit ¿Hablamos un momento?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -561,9 +563,9 @@ Hi {{first_name}},
 
 MIAGAZINE covers Miami's nights the way they deserve: photographed beautifully, published fast, in English and Spanish.
 
-For your next event at {{company}} we offer Event Coverage ($900): photographer on site, edited gallery, recap story, newsletter and social. Our March edition, After Dark, is built around Miami Music Week.
+For your next event at {{company}} we offer Event Coverage ($900): photographer on site, edited gallery, recap story, newsletter and social — or an Event Recap Film ($1,200) with 3 vertical cutdowns. Our March edition, After Dark, is built around Miami Music Week.
 
-Media kit attached. What's your next date?
+Media kit: miagazine.com/media-kit What's your next date?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -583,9 +585,9 @@ Hola {{first_name}}:
 
 MIAGAZINE cubre las noches de Miami como se merecen: bien fotografiadas, publicadas rápido, en español e inglés.
 
-Para tu próximo evento en {{company}} ofrecemos Cobertura de evento ($900): fotógrafo en sitio, galería editada, historia recap, newsletter y redes. Nuestra edición de marzo, After Dark, gira en torno a Miami Music Week.
+Para tu próximo evento en {{company}} ofrecemos Cobertura de evento ($900): fotógrafo en sitio, galería editada, historia recap, newsletter y redes, o una Película recap ($1,200) con 3 cortes verticales. Nuestra edición de marzo, After Dark, gira en torno a Miami Music Week.
 
-Te adjunto el media kit. ¿Cuál es tu próxima fecha?
+Media kit: miagazine.com/es/media-kit ¿Cuál es tu próxima fecha?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -607,7 +609,7 @@ miagazine.com/es · @miagazine
 ```
 Hi {{first_name}},
 
-Great meeting you at {{event}}. As promised, here's the MIAGAZINE media kit.
+Great meeting you at {{event}}. As promised, here's the MIAGAZINE media kit: miagazine.com/media-kit
 
 The short version: a bilingual visual luxury magazine made by Miami photographers; formats from $150; 10 Founding Partner spots at $1,500/year. I also have a few frames from {{event}} that would suit {{company}} — happy to share them.
 
@@ -629,7 +631,7 @@ Not interested? Reply "no thanks" and we won't email you again.
 ```
 Hola {{first_name}}:
 
-Un gusto conocerte en {{event}}. Como te prometí, aquí va el media kit de MIAGAZINE.
+Un gusto conocerte en {{event}}. Como te prometí, aquí va el media kit de MIAGAZINE: miagazine.com/es/media-kit
 
 En corto: una revista visual de lujo bilingüe hecha por fotógrafos de Miami; formatos desde $150; 10 cupos de Socio Fundador a $1,500/año. También tengo algunas fotos de {{event}} que le quedarían muy bien a {{company}}; con gusto te las comparto.
 
@@ -657,7 +659,7 @@ Hi {{first_name}},
 
 {{photographer}} shot a story at {{company}} and it goes live in MIAGAZINE on {{date}}. We'll send you the share kit that morning — please tag @miagazine.
 
-If you'd like to amplify it, our partner rate for a newsletter feature plus a homepage week is $350. Media kit attached for everything else.
+If you'd like to amplify it, our partner rate for a newsletter feature plus a homepage week is $350. Everything else is in the media kit: miagazine.com/media-kit
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -677,7 +679,7 @@ Hola {{first_name}}:
 
 {{photographer}} hizo una historia en {{company}} y se publica en MIAGAZINE el {{date}}. Esa mañana te enviamos el kit para compartir; por favor etiqueta a @miagazine.
 
-Si quieres amplificarla, nuestra tarifa de socio para destacado en newsletter más una semana en la home es de $350. Te adjunto el media kit para todo lo demás.
+Si quieres amplificarla, nuestra tarifa de socio para destacado en newsletter más una semana en la home es de $350. Todo lo demás está en el media kit: miagazine.com/es/media-kit
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -703,7 +705,7 @@ Hi {{first_name}},
 
 We're a new bilingual visual luxury magazine about Miami. {{photographer}} would love to shoot a story at {{company}} — as a Branded Story ($650) or within a Founding Partner year ($1,500).
 
-Media kit attached. Can we set up a quick call with the three of us?
+Media kit: miagazine.com/media-kit Can we set up a quick call with the three of us?
 
 {{sender_name}}
 Partnerships · MIAGAZINE
@@ -725,7 +727,7 @@ Hola {{first_name}}:
 
 Somos una nueva revista visual de lujo bilingüe sobre Miami. A {{photographer}} le encantaría hacer una historia en {{company}}, como Historia de marca ($650) o dentro de un año de Socio Fundador ($1,500).
 
-Te adjunto el media kit. ¿Armamos una llamada rápida los tres?
+Media kit: miagazine.com/es/media-kit ¿Armamos una llamada rápida los tres?
 
 {{sender_name}}
 Alianzas · MIAGAZINE
@@ -738,6 +740,46 @@ miagazine.com/es · @miagazine
 ---
 
 ## Respuestas
+
+### Si muestra interés (enviar PDF) · EN
+
+**Asunto A:** Re: MIAGAZINE media kit  
+**Asunto B:** Re: MIAGAZINE
+
+```
+Hi {{first_name}},
+
+Great to hear. Attached is the full media kit (PDF), including the sample of how a Partner story looks on web, newsletter and Instagram.
+
+The fastest next step is a 15-minute call: {{calendar_link}}
+
+{{sender_name}}
+Partnerships · MIAGAZINE
+miagazine.com · @miagazine
+[MAILING ADDRESS], Miami, FL
+
+Not interested? Reply "no thanks" and we won't email you again.
+```
+
+### Si muestra interés (enviar PDF) · ES
+
+**Asunto A:** Re: media kit de MIAGAZINE  
+**Asunto B:** Re: MIAGAZINE
+
+```
+Hola {{first_name}}:
+
+Qué bueno. Te adjunto el media kit completo en PDF, con el ejemplo de cómo se ve una historia Partner en web, newsletter e Instagram.
+
+El siguiente paso más rápido es una llamada de 15 minutos: {{calendar_link}}
+
+{{sender_name}}
+Alianzas · MIAGAZINE
+miagazine.com/es · @miagazine
+[DIRECCIÓN POSTAL], Miami, FL
+
+¿No te interesa? Responde "no, gracias" y no te volveremos a escribir.
+```
 
 ### Si pide precio especial · EN
 
