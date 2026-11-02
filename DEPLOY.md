@@ -1,8 +1,28 @@
-# Publicar miagazine.com (≈20 min) y conectar integraciones
+# Publicar miagazine.com y conectar integraciones
+
+## 0. Hostinger (opción elegida) — configuración única, ≈10 min
+La web publicada vive en la rama **`hostinger`** del repo (solo el contenido de `site/`, con `.htaccess` incluido). Cada cambio se hace desde la sesión de Claude con `./scripts/publish.sh`, que regenera la web y actualiza esa rama. Hostinger la descarga sola.
+
+1. hPanel → **Sitios web → miagazine.com → Avanzado → GIT**.
+2. En **Repositorio privado** copia la **clave SSH** que muestra Hostinger.
+3. GitHub → repo `focoworking/miaganize` → **Settings → Deploy keys → Add deploy key** → pega la clave, solo lectura → Add.
+4. De vuelta en hPanel → **Crear repositorio nuevo**:
+   - Repositorio: `git@github.com:focoworking/miaganize.git`
+   - Rama: `hostinger`
+   - Directorio: *(vacío → public_html)*. **public_html debe estar vacío**: borra `default.php` desde el Administrador de archivos.
+   - Crear → **Desplegar**.
+5. En el mismo panel activa **Implementación automática** y copia la **URL del webhook**.
+6. GitHub → **Settings → Webhooks → Add webhook** → Payload URL = esa URL · Content type `application/json` · solo evento *push* → Add.
+7. hPanel → **Seguridad → SSL** → instala el SSL gratis para miagazine.com y www. El `.htaccess` ya fuerza HTTPS y www.
+8. Verifica: https://www.miagazine.com, /es/, /media-kit, /blog/.
+
+Desde ahí: **todos los cambios se hacen desde la sesión de Claude**. No edites archivos en el Administrador de archivos de Hostinger: el siguiente despliegue los sobrescribe.
+
+---
+## Alternativa: Cloudflare Pages
 
 Todo lo técnico ya está listo en el repo. Solo faltan tus cuentas.
 
-## 1. Publicar la web en Cloudflare Pages (gratis)
 1. Crear cuenta en dash.cloudflare.com → **Workers & Pages → Create → Pages → Connect to Git**.
 2. Elegir el repo `focoworking/miaganize`, rama `main` (primero hacer merge de `claude/miagazine-launch`).
 3. Configuración de build:
