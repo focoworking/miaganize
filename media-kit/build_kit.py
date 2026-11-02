@@ -6,7 +6,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 C = {
 'en': dict(
  file='MIAGAZINE-Media-Kit-2026-EN',
- kit='Media Kit', season='2026 – 2027', tag='Miami, through the lens.', founding='Founding rates · 10 partner spots',
+ credit='AI-generated illustration', kit='Media Kit', season='2026 – 2027', tag='Miami, through the lens.', founding='Founding rates · 10 partner spots',
  web='miagazine.com', contact='partners@miagazine.com',
  p2_eye='Who we are', p2_h='A select collective that shows Miami at its most brilliant.',
  p2_p='MIAGAZINE is a bilingual digital luxury magazine born in Miami in 2026. We are publicists, reporters, photographers, filmmakers and content creators united to cover the city’s luxury, events, nightlife and public life — with real photography, verified information and impeccable taste.',
@@ -40,7 +40,7 @@ C = {
  legal='MIAGAZINE · Miami, FL · Rates in USD, valid November 2026 – February 2027. Photographs © their respective authors.'),
 'es': dict(
  file='MIAGAZINE-Media-Kit-2026-ES',
- kit='Media Kit', season='2026 – 2027', tag='Miami, a través del lente.', founding='Tarifas fundadoras · 10 cupos de socio',
+ credit='Ilustración generada con IA', kit='Media Kit', season='2026 – 2027', tag='Miami, a través del lente.', founding='Tarifas fundadoras · 10 cupos de socio',
  web='miagazine.com/es', contact='partners@miagazine.com',
  p2_eye='Quiénes somos', p2_h='Un colectivo selecto que muestra Miami en su esplendor.',
  p2_p='MIAGAZINE es una revista digital de lujo bilingüe nacida en Miami en 2026. Somos publicistas, reporteros, fotógrafos, filmmakers y creadores de contenido unidos para cubrir el lujo, los eventos, la noche y la vida pública de la ciudad, con fotografía real, información verificada y un gusto impecable.',
@@ -160,6 +160,33 @@ td.th{font-weight:600;width:2in}
 .dm b{display:block;font-size:10.5pt;margin-bottom:.04in}.dm span{font-size:9pt;color:var(--muted)}
 .stats{gap:.5in .45in !important;margin-top:.25in !important}.stat .n{font-size:64pt !important}.stat .l{font-size:11pt !important}
 .fp .card h2{font-size:46pt !important;white-space:nowrap}
+img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.cover .art{opacity:.88;background:linear-gradient(90deg,rgba(14,14,14,.82) 0%,rgba(14,14,14,.45) 55%,rgba(14,14,14,.15) 100%),linear-gradient(0deg,rgba(14,14,14,.7),transparent 45%) !important}
+.cover .art::after{display:none}
+.cr{position:absolute;right:.12in;bottom:.1in;font-size:6.5pt;letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.35);padding:.02in .07in;z-index:2}
+.cover .cr{right:.8in;bottom:.25in}
+.ph{position:relative;overflow:hidden;background:var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.p2{grid-template-columns:1.25fr 1fr !important;gap:.45in !important}
+.ph.tall{height:2.55in}
+.pillars.row{grid-template-columns:repeat(4,1fr);margin-top:.25in}
+.p2 .lead{font-size:11.5pt}
+.p2 .tags{margin-top:.2in}
+.pillars.sm{margin-top:.22in}.pillars.sm div{padding:.12in .16in}.pillars.sm h3{font-size:14pt}.pillars.sm p{font-size:8pt}
+.dm{bottom:.75in !important;padding-top:.14in !important}
+.p3{display:grid;grid-template-columns:1.9fr 1fr;gap:.4in;align-items:start}
+.p3 .stats{grid-template-columns:repeat(2,1fr) !important;gap:.28in .35in !important;margin-top:0 !important}
+.p3 .stat .n{font-size:48pt !important}
+.p3 .ph{height:4.9in}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:.12in;margin-top:.25in}
+.strip .ph{height:1.25in}
+.crline{font-size:6.5pt;color:var(--muted);margin-top:.05in;text-align:right}
+td{padding:.1in .1in !important}
+td.th2{width:1.25in;padding:.05in 0 .05in .1in !important}
+td.th2 img{width:1.15in;height:.55in;object-fit:cover;display:block}
+td.th2 .sw{display:block;width:1.15in;height:.55in;background:repeating-linear-gradient(135deg,#ece6dc 0 6px,#f6f3ee 6px 12px)}
+.cta{overflow:hidden}.cta>div{position:relative;z-index:1}
+.cta img.bg{opacity:.28}
 '''
 
 def li(xs): return ''.join(f'<li>{x}</li>' for x in xs)
@@ -168,30 +195,34 @@ def kit(L):
     c = C[L]
     foot = lambda n: f'<div class="foot"><span class="logo">MIAGAZINE</span><span>{c["kit"]} {c["season"]}</span><span>{n:02d} / 08</span></div>'
     pages = []
-    pages.append(f'''<section class="page cover"><div class="art"></div><div class="in">
+    pages.append(f'''<section class="page cover"><img class="bg" src="img/edition-02-art-deco-at-50-cover.jpg" alt=""><div class="art"></div><span class="cr">{c['credit']}</span><div class="in">
 <div class="row"><div class="mast">MIAGAZINE</div><div class="meta">{c['web']}<br>{c['contact']}</div></div>
 <div><div class="big">{c['kit']}<br>{c['season']}</div></div>
 <div class="row"><div class="tag">{c['tag']}</div><div class="meta"><span class="pill">{c['founding']}</span></div></div></div></section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p2_eye']}</div><h2>{c['p2_h']}</h2>
-<div class="two"><div><p class="lead">{c['p2_p']}</p><div class="tags">{''.join(f'<span>{x}</span>' for x in c['covers'])}</div></div>
-<div class="pillars">{''.join(f'<div><h3>{a}</h3><p>{b}</p></div>' for a,b in c['pillars'])}</div></div>
+<div class="two p2"><div><p class="lead">{c['p2_p']}</p><div class="tags">{''.join(f'<span>{x}</span>' for x in c['covers'])}</div></div>
+<figure class="ph tall"><img src="img/about-hero.jpg" alt="" style="object-position:center 62%"><span class="cr">{c['credit']}</span></figure></div>
+<div class="pillars sm row">{''.join(f'<div><h3>{a}</h3><p>{b}</p></div>' for a,b in c['pillars'])}</div>
 <div class="dm"><div class="dmt">{c['dm_t']}</div>{''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a,b in c['dm'])}</div>{foot(2)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p3_eye']}</div><h2>{c['p3_h']}</h2>
-<div class="stats">{''.join(f'<div class="stat"><div class="n">{n}</div><div class="l">{l}</div><div class="s">{s}</div></div>' for n,l,s in c['stats'])}</div>
+<div class="p3"><div class="stats">{''.join(f'<div class="stat"><div class="n">{n}</div><div class="l">{l}</div><div class="s">{s}</div></div>' for n,l,s in c['stats'])}</div>
+<figure class="ph"><img src="img/miami-skyline-architecture-2026-cover.jpg" alt="" style="object-position:center 35%"><span class="cr">{c['credit']}</span></figure></div>
 <p class="note">{c['p3_note']}</p>{foot(3)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p4_eye']}</div><h2>{c['p4_h']}</h2>
 <div class="two"><ul class="list">{li(c['aud'])}</ul><div class="chan">{''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a,b in c['ch'])}</div></div>
 <div class="goals"><div class="gt">{c['goals_t']}</div>{''.join(f'<div><div class="n">{n}</div><div class="l">{l}</div></div>' for n,l in c['goals'])}<div class="gn">{c['goals_note']}</div></div>{foot(4)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p5_eye']}</div><h2>{c['p5_h']}</h2>
-<table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['th'])}</tr></thead><tbody>{''.join(f'<tr><td class="f">{a}</td><td class="p">{b}</td><td class="t">{t}</td><td>{d}</td></tr>' for a,b,t,d in c['rows'])}</tbody></table>{foot(5)}</section>''')
+<table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['th'])}</tr></thead><tbody>{''.join(f'<tr><td class="f">{a}</td><td class="p">{b}</td><td class="t">{t}</td><td>{d}</td></tr>' for a,b,t,d in c['rows'])}</tbody></table>
+<div class="strip">{''.join(f'<figure class="ph"><img src="img/{n}.jpg" alt="" style="object-position:{pos}"></figure>' for n,pos in [('michelin-guide-miami-2026-cover','center 65%'),('miami-modeling-swim-week-guide-cover','center 40%'),('miami-luxury-real-estate-2026-cover','center 60%'),('miami-tech-ai-scene-2026-cover','center 70%'),('best-photo-spots-miami-cover','center 70%')])}</div><p class="crline">{c['credit']}</p>{foot(5)}</section>''')
     pages.append(f'''<section class="page"><div class="fp"><div class="card"><div class="eye">{c['p6_eye']}</div><h2>{c['p6_h']}</h2><div class="sub">{c['p6_sub']}</div><ul>{li(c['fp'])}</ul><div class="val">{c['fp_val']}</div></div>
-<div><div class="eye">{c['how_t']}</div><div class="steps">{''.join(f'<div class="step"><div class="k">{i+1:02d}</div><div><b>{a}</b><span>{b}</span></div></div>' for i,(a,b) in enumerate(c['how']))}</div></div></div>{foot(6)}</section>''')
+<div><div class="eye">{c['how_t']}</div><div class="steps">{''.join(f'<div class="step"><div class="k">{i+1:02d}</div><div><b>{a}</b><span>{b}</span></div></div>' for i,(a,b) in enumerate(c['how']))}</div>
+<figure class="ph" style="height:2.1in;margin-top:.25in"><img src="img/miami-art-week-2026-free-guide-cover.jpg" alt=""><span class="cr">{c['credit']}</span></figure></div></div>{foot(6)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p7_eye']}</div><h2>{c['p7_h']}</h2>
-<table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['cal_th'])}</tr></thead><tbody>{''.join(f'<tr><td class="m">{m}</td><td class="th">{t}</td><td>{e}</td><td class="t" style="width:2.2in">{f}</td></tr>' for m,t,e,f in c['cal'])}</tbody></table>
+<table><thead><tr>{''.join(f'<th>{x}</th>' for x in c['cal_th'])}<th></th></tr></thead><tbody>{''.join(f'<tr><td class="m">{m}</td><td class="th">{t}</td><td>{e}</td><td class="t" style="width:2.2in">{f}</td><td class="th2">{('<img src="img/'+img+'-t.jpg" alt="">') if img else '<span class="sw"></span>'}</td></tr>' for (m,t,e,f),img in zip(c['cal'],['miami-art-week-2026-free-guide-cover','edition-02-art-deco-at-50-cover','','','miami-skyline-architecture-2026-cover','']))}</tbody></table>
 <p class="note">{c['cal_note']}</p>{foot(7)}</section>''')
     pages.append(f'''<section class="page"><div class="eye">{c['p8_eye']}</div><h2>{c['p8_h']}</h2>
 <div class="three"><div><h3>{c['specs_t']}</h3><ul>{li(c['specs'])}</ul></div><div><h3>{c['terms_t']}</h3><ul>{li(c['terms'])}</ul></div><div><h3>{c['vis_t']}</h3><ul>{li(c['vis'])}</ul></div></div>
-<div class="cta"><div><h3>{c['cta']}</h3><p>{c['cta_sub']}</p></div><div class="c"><b>{c['contact']}</b><br>{c['web']}<br>@miagazine</div></div>
+<div class="cta"><img class="bg" src="img/newsletter-header.jpg" alt=""><div><h3>{c['cta']}</h3><p>{c['cta_sub']}</p></div><div class="c"><b>{c['contact']}</b><br>{c['web']}<br>@miagazine</div></div>
 <div class="foot"><span>{c['legal']}</span><span>08 / 08</span></div></section>''')
     return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>MIAGAZINE {c['kit']} {c['season']}</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
