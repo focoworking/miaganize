@@ -1,0 +1,106 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>MIAGAZINE Media Kit 2026 – 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@page{size:11in 8.5in;margin:0}
+:root{--ink:#0e0e0e;--paper:#f6f3ee;--muted:#6b665f;--line:#d9d3c9;--gold:#b08d57;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:11pt/1.5 "Inter",sans-serif;color:var(--ink);background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.serif,h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;letter-spacing:-.01em;line-height:1.05}
+.page{width:11in;height:8.5in;position:relative;overflow:hidden;page-break-after:always;padding:.65in .75in}
+.page:last-child{page-break-after:auto}
+.eye{font-size:8pt;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h2{font-size:40pt;margin:.12in 0 .28in;max-width:8.5in}
+.foot{position:absolute;left:.75in;right:.75in;bottom:.4in;display:flex;justify-content:space-between;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);padding-top:.1in}
+.logo{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.32em}
+/* cover */
+.cover{background:var(--ink);color:var(--paper);padding:0}
+.cover .art{position:absolute;inset:0;background:radial-gradient(70% 90% at 82% 18%,rgba(232,197,140,.55),transparent 60%),radial-gradient(60% 70% at 15% 105%,rgba(14,116,144,.55),transparent 70%),linear-gradient(160deg,#0e0e0e 0%,#1d2a2e 45%,#7a5a36 100%)}
+.cover .art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 28px)}
+.cover .in{position:absolute;inset:.7in .8in;display:flex;flex-direction:column;justify-content:space-between}
+.cover .mast{font-size:64pt;letter-spacing:.3em;font-family:"Cormorant Garamond",serif;font-weight:600}
+.cover .big{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:110pt;line-height:.9;color:rgba(255,255,255,.92)}
+.cover .row{display:flex;justify-content:space-between;align-items:flex-end;gap:.4in}
+.cover .tag{font-family:"Cormorant Garamond",serif;font-size:26pt;font-style:italic}
+.cover .meta{text-align:right;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;line-height:2}
+.cover .pill{display:inline-block;border:1px solid var(--gold);color:#e8cfa6;padding:.06in .16in;margin-top:.1in}
+/* p2 */
+.lead{font-size:13pt;line-height:1.6;max-width:6.4in;color:#2b2925}
+.two{display:grid;grid-template-columns:1.15fr 1fr;gap:.55in}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.pillars div{background:var(--white);padding:.2in .22in}
+.pillars h3{font-size:17pt;margin-bottom:.05in;color:var(--gold)}
+.pillars p{font-size:9pt;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.08in;margin-top:.3in}
+.tags span{border:1px solid var(--ink);padding:.05in .14in;font-size:8pt;letter-spacing:.14em;text-transform:uppercase}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.28in .4in;margin-top:.1in}
+.stat{border-top:1px solid var(--ink);padding-top:.12in}
+.stat .n{font-family:"Cormorant Garamond",serif;font-size:50pt;line-height:1;color:var(--ink)}
+.stat .l{font-size:10pt;margin-top:.06in}
+.stat .s{font-size:7pt;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-top:.05in}
+.note{font-size:7.5pt;color:var(--muted);margin-top:.25in}
+/* audience */
+.list li{list-style:none;padding:.09in 0;border-bottom:1px solid var(--line);font-size:10pt}
+.chan{display:grid;grid-template-columns:1fr 1fr;gap:.12in .3in}
+.chan div{border-left:2px solid var(--gold);padding-left:.12in}
+.chan b{display:block;font-size:10pt}.chan span{font-size:8.5pt;color:var(--muted)}
+.goals{display:grid;grid-template-columns:repeat(4,1fr);gap:.2in;background:var(--ink);color:var(--paper);padding:.22in .3in;margin-top:.3in}
+.goals .gt{grid-column:1/-1;font-size:7.5pt;letter-spacing:.24em;text-transform:uppercase;color:#e8cfa6}
+.goals .n{font-family:"Cormorant Garamond",serif;font-size:34pt;line-height:1}
+.goals .l{font-size:8.5pt;color:#c9c2b6}
+.goals .gn{grid-column:1/-1;font-size:7.5pt;color:#a8a197;font-style:italic}
+/* rates */
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:.08in .1in;border-bottom:1px solid var(--ink)}
+td{padding:.13in .1in;border-bottom:1px solid var(--line);vertical-align:top;font-size:9.5pt}
+td.f{font-weight:600;width:2.1in}
+td.p{font-family:"Cormorant Garamond",serif;font-size:24pt;line-height:1;width:1.1in;white-space:nowrap}
+td.t{color:var(--muted);width:1.1in;font-size:8.5pt}
+/* founding */
+.fp{display:grid;grid-template-columns:1fr 1.15fr;gap:.5in;height:6.3in}
+.fp .card{background:var(--ink);color:var(--paper);padding:.45in .45in;display:flex;flex-direction:column}
+.fp .card .eye{color:#e8cfa6}
+.fp .card h2{font-size:58pt;margin:.1in 0 .05in;color:var(--paper)}
+.fp .card .sub{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17pt;color:#e8cfa6;margin-bottom:.25in}
+.fp .card li{list-style:none;padding:.07in 0;border-bottom:1px solid #2c2a27;font-size:10pt}
+.fp .card li::before{content:"— ";color:var(--gold)}
+.fp .card .val{margin-top:auto;font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;color:#a8a197}
+.steps{display:grid;gap:.18in;margin-top:.2in}
+.step{display:grid;grid-template-columns:.55in 1fr;gap:.1in;align-items:start;border-top:1px solid var(--line);padding-top:.14in}
+.step .k{font-family:"Cormorant Garamond",serif;font-size:30pt;line-height:.9;color:var(--gold)}
+.step b{font-size:11pt;display:block}.step span{font-size:9.5pt;color:var(--muted)}
+/* calendar */
+td.m{font-family:"Cormorant Garamond",serif;font-size:17pt;width:1.1in;white-space:nowrap}
+td.th{font-weight:600;width:2in}
+/* details */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:.4in}
+.three h3{font-size:19pt;margin-bottom:.1in;padding-bottom:.08in;border-bottom:1px solid var(--ink)}
+.three li{list-style:none;font-size:9pt;padding:.06in 0;border-bottom:1px solid var(--line)}
+.cta{position:absolute;left:.75in;right:.75in;bottom:.85in;background:var(--ink);color:var(--paper);padding:.3in .4in;display:flex;justify-content:space-between;align-items:center}
+.cta h3{font-size:28pt;font-style:italic}
+.cta p{font-size:9pt;color:#c9c2b6;margin-top:.05in}
+.cta .c{text-align:right;font-size:12pt;line-height:1.7}
+.cta .c b{color:#e8cfa6;font-weight:500}
+.dm{position:absolute;left:.75in;right:.75in;bottom:.85in;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:.3in;border-top:1px solid var(--ink);padding-top:.2in}
+.dmt{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24pt;line-height:1.1}
+.dm b{display:block;font-size:10.5pt;margin-bottom:.04in}.dm span{font-size:9pt;color:var(--muted)}
+.stats{gap:.5in .45in !important;margin-top:.25in !important}.stat .n{font-size:64pt !important}.stat .l{font-size:11pt !important}
+.fp .card h2{font-size:46pt !important;white-space:nowrap}
+</style></head><body><section class="page cover"><div class="art"></div><div class="in">
+<div class="row"><div class="mast">MIAGAZINE</div><div class="meta">miagazine.com/es<br>partners@miagazine.com</div></div>
+<div><div class="big">Media Kit<br>2026 – 2027</div></div>
+<div class="row"><div class="tag">Miami, a través del lente.</div><div class="meta"><span class="pill">Tarifas fundadoras · 10 cupos de socio</span></div></div></div></section><section class="page"><div class="eye">Quiénes somos</div><h2>Un colectivo selecto que muestra Miami en su esplendor.</h2>
+<div class="two"><div><p class="lead">MIAGAZINE es una revista digital de lujo bilingüe nacida en Miami en 2026. Somos publicistas, reporteros, fotógrafos, filmmakers y creadores de contenido unidos para cubrir el lujo, los eventos, la noche y la vida pública de la ciudad, con fotografía real, información verificada y un gusto impecable.</p><div class="tags"><span>Arte y Cultura</span><span>Moda y Modelos</span><span>Real Estate</span><span>Noche y Música</span><span>Gastronomía</span><span>Vida en el agua</span><span>Diseño</span><span>Economía y Tech</span></div></div>
+<div class="pillars"><div><h3>Primero lo visual</h3><p>Cada historia nace de la fotografía de nuestra red de fotógrafos de Miami.</p></div><div><h3>Bilingüe</h3><p>Español e inglés, para la audiencia local, estadounidense y latinoamericana.</p></div><div><h3>Siempre presentes</h3><p>En persona en Art Week, Art Deco Weekend, Boat Show, Swim Week y las noches entre medio.</p></div><div><h3>Lista para buscadores</h3><p>Hecha para Google, AI Overviews, ChatGPT y Perplexity: estructurada, con fuentes, citable.</p></div></div></div>
+<div class="dm"><div class="dmt">¿Qué es una revista digital?</div><div><b>Siempre activa</b><span>Publica cada semana y cubre eventos en tiempo real, no una vez al mes.</span></div><div><b>En todas partes</b><span>Web, newsletter, redes, video y ediciones descargables, gratis en cualquier pantalla.</span></div><div><b>Medible</b><span>Cada publicación incluye datos claros de alcance, clics e interacción.</span></div></div><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>02 / 08</span></div></section><section class="page"><div class="eye">Por qué Miami</div><h2>La ciudad que todos están mirando.</h2>
+<div class="stats"><div class="stat"><div class="n">$260.8B</div><div class="l">PIB de Miami-Dade, 2024</div><div class="s">U.S. Bureau of Economic Analysis (vía FRED)</div></div><div class="stat"><div class="n">28M+</div><div class="l">visitantes a Greater Miami & the Beaches, 2024</div><div class="s">Greater Miami Convention & Visitors Bureau</div></div><div class="stat"><div class="n">8.56M</div><div class="l">pasajeros de crucero en PortMiami, año fiscal 2025</div><div class="s">PortMiami</div></div><div class="stat"><div class="n">14</div><div class="l">restaurantes con estrella Michelin en Greater Miami, 2026</div><div class="s">Guía Michelin Florida 2026</div></div><div class="stat"><div class="n">272</div><div class="l">galerías en Art Basel Miami Beach 2026</div><div class="s">Art Basel</div></div><div class="stat"><div class="n">$4.4B</div><div class="l">invertidos por compradores internacionales en real estate de Miami</div><div class="s">MIAMI REALTORS</div></div></div>
+<p class="note">Cifras según cada fuente; citas completas en miagazine.com/es/blog.</p><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>03 / 08</span></div></section><section class="page"><div class="eye">Audiencia y canales</div><h2>Quién te ve.</h2>
+<div class="two"><ul class="list"><li>Residentes de Brickell, Miami Beach, Coral Gables, Design District y Key Biscayne</li><li>Visitantes en Art Week, Boat Show, F1 y Swim Week</li><li>Lectores bilingües y latinoamericanos de alto poder adquisitivo</li><li>Profesionales creativos, de hospitalidad, moda y real estate</li></ul><div class="chan"><div><b>miagazine.com</b><span>Journal, historias y guía de la ciudad (ES/EN)</span></div><div><b>The Lens</b><span>Newsletter semanal, cada jueves</span></div><div><b>Instagram y TikTok</b><span>Carruseles, Reels y cobertura de eventos en vivo</span></div><div><b>Pinterest y LinkedIn</b><span>Tráfico permanente y alcance B2B</span></div><div><b>Red de fotógrafos</b><span>Cada historia la comparten sus fotógrafos, modelos y venues</span></div><div><b>Eventos</b><span>Presencia en sitio con captura por QR en los eventos clave de Miami</span></div></div></div>
+<div class="goals"><div class="gt">Metas de lanzamiento · primeros 90 días</div><div><div class="n">1,500</div><div class="l">suscriptores al newsletter</div></div><div><div class="n">3,000</div><div class="l">seguidores en Instagram</div></div><div><div class="n">300</div><div class="l">personas fotografiadas y etiquetadas</div></div><div><div class="n">25</div><div class="l">historias publicadas</div></div><div class="gn">Somos una publicación en lanzamiento: son metas, no cifras auditadas actuales. Cada socio recibe un reporte real de resultados por cada publicación.</div></div><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>04 / 08</span></div></section><section class="page"><div class="eye">Formatos y tarifas</div><h2>Hazte ver con belleza.</h2>
+<table><thead><tr><th>Formato</th><th>Tarifa</th><th>Plazo</th><th>Qué incluye</th></tr></thead><tbody><tr><td class="f">Patrocinio Newsletter</td><td class="p">$150</td><td class="t">por envío</td><td>Logo, 60 palabras y un link en The Lens, nuestro newsletter de los jueves.</td></tr><tr><td class="f">Destacado en Home</td><td class="p">$250</td><td class="t">por semana</td><td>Bloque destacado en la portada de miagazine.com, ES + EN.</td></tr><tr><td class="f">MIA Selects</td><td class="p">$99</td><td class="t">al mes</td><td>Ficha curada en nuestra guía de Miami con fotos, mapa y datos estructurados.</td></tr><tr><td class="f">Historia de marca</td><td class="p">$650</td><td class="t">único</td><td>Shoot profesional de nuestra red + historia Partner en web, newsletter y redes.</td></tr><tr><td class="f">Cobertura de evento</td><td class="p">$900</td><td class="t">único</td><td>Fotógrafo en tu evento, galería editada, historia recap y posts en redes.</td></tr><tr><td class="f">Patrocinio de edición</td><td class="p">$500</td><td class="t">por edición</td><td>Contraportada de la edición trimestral digital / impresa bajo demanda.</td></tr></tbody></table><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>05 / 08</span></div></section><section class="page"><div class="fp"><div class="card"><div class="eye">Socio Fundador</div><h2>$1,500 / año</h2><div class="sub">Solo 10 cupos. Tarifa congelada por 12 meses.</div><ul><li>12 patrocinios de newsletter (uno al mes)</li><li>1 historia de marca fotografiada profesionalmente</li><li>12 meses de ficha en MIA Selects</li><li>Logo en nuestra página de Partners (ES + EN)</li><li>Invitaciones prioritarias a eventos MIAGAZINE</li><li>Reporte trimestral de resultados</li></ul><div class="val">Valor equivalente a tarifa estándar: $3,638</div></div>
+<div><div class="eye">Cómo funciona una historia de marca</div><div class="steps"><div class="step"><div class="k">01</div><div><b>Brief</b><span>Llamada de 15 minutos: objetivo, audiencia y fechas.</span></div></div><div class="step"><div class="k">02</div><div><b>Shoot</b><span>Asignamos un fotógrafo de la red; tú apruebas el concepto.</span></div></div><div class="step"><div class="k">03</div><div><b>Publicación</b><span>La historia sale en web, newsletter y redes, etiquetada “Partner”.</span></div></div><div class="step"><div class="k">04</div><div><b>Reporte</b><span>Alcance, clics e interacción en 14 días.</span></div></div></div></div></div><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>06 / 08</span></div></section><section class="page"><div class="eye">Calendario editorial y de eventos</div><h2>Dónde puede aparecer tu marca.</h2>
+<table><thead><tr><th>Edición</th><th>Tema</th><th>Eventos ancla</th><th>Ideal para</th></tr></thead><tbody><tr><td class="m">Dic 2026</td><td class="th">Art Week a través del lente</td><td>Miami Art Week, 30 nov – 6 dic · Art Basel 4–6 dic</td><td class="t" style="width:2.2in">Galerías, hoteles, moda, coleccionables</td></tr><tr><td class="m">Ene 2027</td><td class="th">Art Deco at 50</td><td>Art Deco Weekend, 15–17 ene · Beaux Arts Festival</td><td class="t" style="width:2.2in">Hospitalidad, vintage, autos, diseño</td></tr><tr><td class="m">Feb 2027</td><td class="th">Waterfront</td><td>Miami International Boat Show, 10–14 feb · SOBEWFF 25–28 feb</td><td class="t" style="width:2.2in">Náutica, real estate, gastronomía, licores</td></tr><tr><td class="m">Mar 2027</td><td class="th">After Dark</td><td>Miami Music Week 22–28 mar · Ultra 26–28 mar</td><td class="t" style="width:2.2in">Vida nocturna, bebidas, moda, tech</td></tr><tr><td class="m">Abr 2027</td><td class="th">Diseño e Interiores</td><td>Temporada del Design District</td><td class="t" style="width:2.2in">Mobiliario, arquitectura, real estate</td></tr><tr><td class="m">May 2027</td><td class="th">Speed & Style</td><td>F1 Miami Grand Prix · Miami Swim Week</td><td class="t" style="width:2.2in">Automotriz, relojes, swimwear, hospitalidad</td></tr></tbody></table>
+<p class="note">Fechas según organizadores oficiales o listados a noviembre de 2026; sujetas a cambios.</p><div class="foot"><span class="logo">MIAGAZINE</span><span>Media Kit 2026 – 2027</span><span>07 / 08</span></div></section><section class="page"><div class="eye">Especificaciones, términos y visibilidad</div><h2>Los detalles.</h2>
+<div class="three"><div><h3>Especificaciones creativas</h3><ul><li>Logo: SVG o PNG transparente, mín. 1000 px de ancho</li><li>Texto newsletter: hasta 60 palabras + 1 URL (UTM bienvenido)</li><li>Imágenes que recibimos: JPG/WebP, mín. 3000 px lado largo, con derechos de uso</li><li>Historia de marca: producimos toda la fotografía; tú apruebas datos, no la voz editorial</li></ul></div><div><h3>Términos de reserva</h3><ul><li>Pago por link seguro (Stripe) para confirmar la fecha</li><li>Materiales 7 días antes de la publicación</li><li>Reembolso completo si cancelas 7+ días antes</li><li>Todo contenido pagado se etiqueta “Partner” (guías de la FTC)</li><li>Tarifas fundadoras válidas para contratos firmados antes del 28 feb 2027</li></ul></div><div><h3>Visibilidad más allá de redes</h3><ul><li>SEO: cada historia Partner se indexa con datos estructurados (schema.org)</li><li>AEO: respuestas preparadas para Google AI Overviews y fragmentos destacados</li><li>GEO / LLM: contenido con fuentes y fechas, hecho para ser citado por ChatGPT, Perplexity y Gemini</li><li>Páginas bilingües duplican tu presencia en buscadores (ES + EN)</li></ul></div></div>
+<div class="cta"><div><h3>Creemos algo hermoso.</h3><p>Agenda una llamada de 15 minutos o reserva tu cupo de Socio Fundador.</p></div><div class="c"><b>partners@miagazine.com</b><br>miagazine.com/es<br>@miagazine</div></div>
+<div class="foot"><span>MIAGAZINE · Miami, FL · Tarifas en USD, válidas de noviembre 2026 a febrero 2027. Fotografías © de sus respectivos autores.</span><span>08 / 08</span></div></section></body></html>
