@@ -16,5 +16,7 @@
   "STRIPE_FOUNDING_QUARTERLY": "",
   "STRIPE_BUNDLE_ARTWEEK": "",
   "STRIPE_BUNDLE_ARTDECO": "",
-  "STRIPE_BUNDLE_BOATSHOW": ""
+  "STRIPE_BUNDLE_BOATSHOW": "",
+  "PREVIEW_NOINDEX": true,
+  "_help_preview": "PREVIEW_NOINDEX=true mientras la web esté en el dominio temporal de Hostinger. Cambiar a false cuando miagazine.com esté activo."
 }

@@ -398,7 +398,16 @@ def build_media_kit_page():
 def apply_integrations():
     cfg = os.path.join(ROOT, 'config', 'integrations.json')
     if not os.path.exists(cfg): return
-    vals = {k: v for k, v in json.load(open(cfg)).items() if not k.startswith('_') and v}
+    raw = json.load(open(cfg))
+    if raw.get('PREVIEW_NOINDEX'):
+        for f in glob.glob(os.path.join(OUT, '**/*.html'), recursive=True):
+            h = open(f).read()
+            if 'name="robots"' not in h:
+                open(f, 'w').write(h.replace('<meta charset="utf-8">', '<meta charset="utf-8"><meta name="robots" content="noindex, nofollow">', 1))
+        open(os.path.join(OUT, 'robots.txt'), 'w').write('# Preview on temporary domain: not for indexing\nUser-agent: *\nDisallow: /\n')
+    else:
+        shutil.copy(os.path.join(ROOT, 'build', 'robots.prod.txt'), os.path.join(OUT, 'robots.txt'))
+    vals = {k: v for k, v in raw.items() if not k.startswith('_') and isinstance(v, str) and v}
     if not vals: return
     for f in glob.glob(os.path.join(OUT, '**/*.html'), recursive=True):
         h = open(f).read(); n = h
