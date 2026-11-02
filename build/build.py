@@ -67,16 +67,49 @@ def head(lang, title, desc, path, alt_path=None, extra='', og_type='website'):
 def nav(lang, alt_path):
     t = T[lang]
     return f'''<header class="top"><div class="wrap"><a class="logo" href="{t['home']}">MIAGAZINE</a><nav>
-<a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/stories/')}" class="hide-sm">{t['stories']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}" class="hide-sm">{t['advertise']}</a>
+<a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/stories/')}" class="hide-sm">{t['stories']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}" class="hide-sm">{t['advertise']}</a><a href="{P(lang,'/about.html')}" class="hide-sm">{t['about']}</a>
 <a class="lang" href="{alt_path}" hreflang="{t['other']}" lang="{t['other']}">{t['other_label']}</a></nav></div></header>'''
 
+COOKIE_TXT = {
+ 'en': dict(t='We value your privacy', d='We use necessary storage to run this site and, only with your consent, analytics and marketing cookies to understand our audience and measure campaigns.', acc='Accept all', rej='Reject', cfg='Settings', save='Save preferences', nec='Necessary', nec_d='Required for the site to work (e.g., remembering this choice). Always on.', ana='Analytics', ana_d='Helps us understand which stories you read. No ads.', mkt='Marketing', mkt_d='Measures our social media campaigns (e.g., Meta, Google).', more='Cookie Policy', prefs='Cookie preferences'),
+ 'es': dict(t='Valoramos tu privacidad', d='Usamos almacenamiento necesario para que el sitio funcione y, solo con tu consentimiento, cookies de analítica y marketing para entender a nuestra audiencia y medir campañas.', acc='Aceptar todas', rej='Rechazar', cfg='Configurar', save='Guardar preferencias', nec='Necesarias', nec_d='Indispensables para que el sitio funcione (por ejemplo, recordar esta elección). Siempre activas.', ana='Analítica', ana_d='Nos ayuda a saber qué historias lees. Sin publicidad.', mkt='Marketing', mkt_d='Mide nuestras campañas en redes (por ejemplo, Meta, Google).', more='Política de cookies', prefs='Preferencias de cookies'),
+}
+
+def cookie_banner(lang):
+    c = COOKIE_TXT[lang]
+    return f"""<div class="cookie" id="cookie" role="dialog" aria-modal="false" aria-labelledby="ck-t" hidden>
+<div class="ck-in"><div class="ck-text"><strong id="ck-t">{c['t']}</strong><p>{c['d']} <a href="{P(lang,'/legal/cookies.html')}">{c['more']}</a>.</p></div>
+<div class="ck-opts" id="ck-opts" hidden>
+<label class="ck-row"><input type="checkbox" checked disabled><span><b>{c['nec']}</b><small>{c['nec_d']}</small></span></label>
+<label class="ck-row"><input type="checkbox" id="ck-ana"><span><b>{c['ana']}</b><small>{c['ana_d']}</small></span></label>
+<label class="ck-row"><input type="checkbox" id="ck-mkt"><span><b>{c['mkt']}</b><small>{c['mkt_d']}</small></span></label></div>
+<div class="ck-btns"><button class="btn ghost" id="ck-rej" type="button">{c['rej']}</button><button class="btn ghost" id="ck-cfg" type="button">{c['cfg']}</button><button class="btn ghost" id="ck-save" type="button" hidden>{c['save']}</button><button class="btn" id="ck-acc" type="button">{c['acc']}</button></div></div></div>
+<script>(function(){{var K='mg-consent',el=document.getElementById('cookie');
+function get(){{try{{var v=JSON.parse(localStorage.getItem(K));if(v&&Date.now()-v.ts<365*864e5)return v}}catch(e){{}}return null}}
+function apply(v){{window.mgConsent=v;/* ANALYTICS / MARKETING TAGS: load here only if v.analytics / v.marketing */}}
+function set(a,m){{var v={{necessary:true,analytics:a,marketing:m,ts:Date.now(),v:1}};try{{localStorage.setItem(K,JSON.stringify(v))}}catch(e){{}}apply(v);el.hidden=true}}
+function open(){{var v=get();document.getElementById('ck-ana').checked=!!(v&&v.analytics);document.getElementById('ck-mkt').checked=!!(v&&v.marketing);el.hidden=false}}
+var gpc=navigator.globalPrivacyControl===true,cur=get();
+if(cur)apply(cur);else if(gpc){{set(false,false)}}else el.hidden=false;
+document.getElementById('ck-acc').onclick=function(){{set(true,true)}};
+document.getElementById('ck-rej').onclick=function(){{set(false,false)}};
+document.getElementById('ck-cfg').onclick=function(){{document.getElementById('ck-opts').hidden=false;this.hidden=true;document.getElementById('ck-save').hidden=false}};
+document.getElementById('ck-save').onclick=function(){{set(document.getElementById('ck-ana').checked,document.getElementById('ck-mkt').checked)}};
+document.querySelectorAll('[data-cookie-prefs]').forEach(function(b){{b.onclick=function(e){{e.preventDefault();open();document.getElementById('ck-opts').hidden=false;document.getElementById('ck-cfg').hidden=true;document.getElementById('ck-save').hidden=false}}}});
+}})();</script>"""
+
 def footer(lang):
-    t = T[lang]
-    return f'''<footer><div class="wrap"><div><span class="logo" style="font-size:18px">MIAGAZINE</span><p class="small">{t['tagline']} {t['footer']}</p></div>
-<div><a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}">{t['advertise']}</a><a href="{P(lang,'/about.html')}">{t['about']}</a><a href="https://instagram.com/miagazine">Instagram</a></div>
-<p class="small">© 2026 MIAGAZINE · Miami, FL</p></div></footer>
+    t = T[lang]; c = COOKIE_TXT[lang]
+    L = lambda en, es: en if lang == 'en' else es
+    return f"""<footer><div class="wrap foot-grid">
+<div><span class="logo" style="font-size:18px">MIAGAZINE</span><p class="small">{t['tagline']} {t['footer']}</p></div>
+<div><div class="eyebrow">{L('Magazine','Revista')}</div><a href="{t['journal_url']}">{t['journal']}</a><a href="{P(lang,'/stories/')}">{t['stories']}</a><a href="{P(lang,'/submit.html')}">{t['submit']}</a><a href="{P(lang,'/advertise.html')}">{t['advertise']}</a></div>
+<div><div class="eyebrow">{L('Company','Compañía')}</div><a href="{P(lang,'/about.html')}">{t['about']}</a><a href="{P(lang,'/careers.html')}">{L('Careers','Vacantes')}</a><a href="https://instagram.com/miagazine">Instagram</a></div>
+<div><div class="eyebrow">Legal</div><a href="{P(lang,'/legal/intellectual-property.html')}">{L('IP & Permissions','Propiedad intelectual')}</a><a href="{P(lang,'/legal/privacy.html')}">{L('Privacy','Privacidad')}</a><a href="{P(lang,'/legal/cookies.html')}">Cookies</a><a href="{P(lang,'/legal/terms.html')}">{L('Terms','Términos')}</a><a href="{P(lang,'/legal/editorial-policy.html')}">{L('Editorial policy','Política editorial')}</a><a href="#" data-cookie-prefs>{c['prefs']}</a></div>
+</div><div class="wrap"><p class="small foot-copy">© 2026 MIAGAZINE · Miami, FL · {L('All rights reserved. Photographs © their respective authors.','Todos los derechos reservados. Fotografías © de sus respectivos autores.')}</p></div></footer>
+{cookie_banner(lang)}
 <script>document.querySelectorAll('form.sub').forEach(f=>f.addEventListener('submit',e=>{{if(f.action.includes('BEEHIIV')){{e.preventDefault();f.querySelector('button').textContent='✓'}}}}));</script>
-</body></html>'''
+</body></html>"""
 
 def subform(lang):
     t = T[lang]
@@ -226,7 +259,8 @@ def build_pages(posts):
 <section><div class="wrap"><div class="eyebrow">{t['journal']}</div><h2>{t['latest']}</h2><div class="post-grid">{latest}</div>
 <div class="ctas" style="justify-content:flex-start"><a class="btn ghost" href="{t['journal_url']}">{L('Read the Journal','Leer el Journal')} →</a></div></div></section>
 <section class="dark"><div class="wrap split"><div><div class="eyebrow">{L('For photographers','Para fotógrafos')}</div><h2>{L('Made by the lens collective.','Hecha por el colectivo del lente.')}</h2><p>{L('Submit your editorial, get published with full credit and a link to your portfolio, and earn 20% on every partnership you bring.','Envía tu editorial, publica con crédito completo y link a tu portafolio, y gana 20% de cada alianza que traigas.')}</p><div class="ctas" style="justify-content:flex-start"><a class="btn light" href="{P(lang,'/submit.html')}">{t['submit']}</a></div></div>
-<div><div class="eyebrow">{L('For brands','Para marcas')}</div><h2>{L('Be seen beautifully.','Hazte ver con belleza.')}</h2><p>{L('Newsletter sponsorships, photographed brand stories, event coverage and a place in our Miami guide. Founding rates for our first 10 partners.','Patrocinio de newsletter, historias de marca fotografiadas, cobertura de eventos y un lugar en nuestra guía de Miami. Tarifas fundadoras para los primeros 10 socios.')}</p><div class="ctas" style="justify-content:flex-start"><a class="btn light" href="{P(lang,'/advertise.html')}">{t['advertise']}</a></div></div></div></section>'''
+<div><div class="eyebrow">{L('For brands','Para marcas')}</div><h2>{L('Be seen beautifully.','Hazte ver con belleza.')}</h2><p>{L('Newsletter sponsorships, photographed brand stories, event coverage and a place in our Miami guide. Founding rates for our first 10 partners.','Patrocinio de newsletter, historias de marca fotografiadas, cobertura de eventos y un lugar en nuestra guía de Miami. Tarifas fundadoras para los primeros 10 socios.')}</p><div class="ctas" style="justify-content:flex-start"><a class="btn light" href="{P(lang,'/advertise.html')}">{t['advertise']}</a></div></div></div></section>
+<section class="jobs-band"><div class="wrap"><div><div class="eyebrow">{L('Careers','Vacantes')}</div><h2>{L('Join the collective.','Únete al colectivo.')}</h2><p class="small">{L('Photographers, filmmakers, bilingual reporters, creators, sales and PR. Interviews by appointment only.','Fotógrafos, filmmakers, reporteros bilingües, creadores, ventas y relaciones públicas. Entrevistas solo con previa cita.')}</p></div><a class="btn" href="{P(lang,'/careers.html')}">{L('See open positions','Ver vacantes')}</a></div></section>'''
         page(lang, P(lang, '/'), P(o, '/'), f"MIAGAZINE — {t['tagline']}", L("Miami's visual luxury magazine: fashion, design, real estate, music, food and waterfront living, photographed by Miami photographers. Free weekly newsletter.", "La revista visual de lujo de Miami: moda, diseño, real estate, música, gastronomía y vida en el agua, fotografiada por fotógrafos de Miami. Newsletter semanal gratis."), home)
 
         stories = f'''<div class="hero wrap"><div class="eyebrow">{t['stories']}</div><h1>{L('The edition','La edición')}</h1><p>{L('Photographic editorials from our photographer network. First stories land during Miami Art Week.','Editoriales fotográficos de nuestra red de fotógrafos. Las primeras historias llegan en Miami Art Week.')}</p></div>
@@ -250,28 +284,86 @@ def build_pages(posts):
 <p class="small" style="margin-top:18px">{L('All paid content is labeled “Partner”. Questions: partners@miagazine.com','Todo contenido pagado se etiqueta “Partner”. Preguntas: partners@miagazine.com')}</p></div></section>'''
         page(lang, P(lang, '/advertise.html'), P(o, '/advertise.html'), L('Advertise in a Miami Luxury Magazine — Founding Rates | MIAGAZINE','Anúnciate en una revista de lujo de Miami — Tarifas fundadoras | MIAGAZINE'), L('Newsletter sponsorships from $150, branded photo stories, event coverage and Founding Partner packages.','Patrocinios de newsletter desde $150, historias de marca fotografiadas, cobertura de eventos y paquetes de Socio Fundador.'), adv)
 
-        about = f'''<div class="hero wrap"><div class="eyebrow">{t['about']}</div><h1>{L('A magazine made by its photographers.','Una revista hecha por sus fotógrafos.')}</h1></div>
-<section><div class="wrap prose"><p class="answer"><strong>{L('What is MIAGAZINE?','¿Qué es MIAGAZINE?')}</strong> {L('MIAGAZINE is a bilingual digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials and a researched Journal on fashion, real estate, economy, music, design, food, tech and waterfront living, created with a curated network of Miami photographers, plus a free weekly newsletter called The Lens.','MIAGAZINE es una revista digital de lujo bilingüe sobre Miami, fundada en 2026. Publica editoriales fotográficos y un Journal investigado sobre moda, real estate, economía, música, diseño, gastronomía, tecnología y vida en el agua, creados con una red curada de fotógrafos de Miami, además de un newsletter semanal gratis llamado The Lens.')}</p>
-<h2>{L('Editorial standards','Estándares editoriales')}</h2><ul>{li(L(['Every story is curated and edited by our editorial team.','Paid content is always labeled “Partner”.','Every image is credited to its photographer and team.','Real photography only. AI may assist with translation and metadata, always reviewed by an editor. Speculative pieces are clearly labeled as fiction.','Journal articles cite their sources and show the date they were last updated.'],['Cada historia es curada y editada por nuestro equipo editorial.','El contenido pagado siempre se etiqueta “Partner”.','Cada imagen lleva crédito de su fotógrafo y equipo.','Solo fotografía real. La IA puede apoyar traducción y metadatos, siempre revisados por un editor. Las piezas especulativas se etiquetan como ficción.','Los artículos del Journal citan sus fuentes y muestran su fecha de actualización.']))}</ul>
-<h2>{L('Contact','Contacto')}</h2><p>Editorial: editorial@miagazine.com · Partners: partners@miagazine.com</p></div></section>'''
-        page(lang, P(lang, '/about.html'), P(o, '/about.html'), L('About MIAGAZINE — Editorial Standards','Sobre MIAGAZINE — Estándares editoriales'), L('About MIAGAZINE, Miami’s bilingual visual luxury magazine.','Sobre MIAGAZINE, la revista visual de lujo bilingüe de Miami.'), about)
-
         page(lang, P(lang, '/404.html'), P(o, '/404.html'), '404 — MIAGAZINE', 'Not found', f'<div class="hero wrap"><h1>{L("Out of frame.","Fuera de cuadro.")}</h1><p><a href="{t["home"]}">MIAGAZINE</a></p></div>')
+
+LEGAL_ORDER = ['intellectual-property', 'privacy', 'cookies', 'terms', 'editorial-policy']
+
+def page_path(slug):
+    return f'/legal/{slug}.html' if slug in LEGAL_ORDER else f'/{slug}.html'
+
+def render_page_body(md_text):
+    out, kp = [], []
+    def flush():
+        if kp:
+            out.append('<div class="keypoints">' + ''.join(kp) + '</div>'); out.append(''); kp.clear()
+    for line in md_text.split('\n'):
+        if line.startswith('!! '):
+            txt = line[3:].strip(); m = re.match(r'^\*{0,2}([^:]{1,60}?)\*{0,2}:\s+(.*)$', txt)
+            kp.append(f'<div><strong>{esc(m.group(1))}</strong><span>{markdown.markdown(m.group(2))[3:-4]}</span></div>' if m else f'<div><span>{markdown.markdown(txt)[3:-4]}</span></div>')
+        else:
+            flush(); out.append(line)
+    flush()
+    md = markdown.Markdown(extensions=['tables', 'toc', 'sane_lists', 'attr_list'], extension_configs={'toc': {'toc_depth': '2'}})
+    h = md.convert('\n'.join(out))
+    h = h.replace('<table>', '<div class="table-wrap"><table>').replace('</table>', '</table></div>')
+    h = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener">', h).replace('rel="noopener">>', 'rel="noopener">')
+    return h, md.toc_tokens
+
+def build_content_pages():
+    pages = {'en': {}, 'es': {}}
+    for f in sorted(glob.glob(os.path.join(ROOT, 'content/pages/*.md'))):
+        m = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', open(f).read(), re.S)
+        if not m: print('skip', f); continue
+        meta = yaml.safe_load(m.group(1)); meta['body'] = m.group(2)
+        lang = meta.get('lang') or f.split('.')[-2]; pages[lang][meta['slug']] = meta
+    for lang in ('en', 'es'):
+        t = T[lang]; o = 'es' if lang == 'en' else 'en'
+        L = lambda en, es: en if lang == 'en' else es
+        for slug, p in pages[lang].items():
+            path = P(lang, page_path(slug)); alt = P(o, page_path(slug)) if slug in pages[o] else P(o, '/')
+            body, toc = render_page_body(p['body'])
+            d = datetime.date.fromisoformat(str(p.get('updated', TODAY)))
+            dstr = d.strftime('%B %d, %Y') if lang == 'en' else f"{d.day} de {['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][d.month-1]} de {d.year}"
+            is_legal = slug in LEGAL_ORDER
+            eyebrow = p.get('eyebrow') or ('Legal' if is_legal else 'MIAGAZINE')
+            cta = f'<div class="ctas" style="justify-content:flex-start"><a class="btn" href="{esc(p["cta_url"])}">{esc(p["cta_label"])}</a><a class="btn ghost" href="mailto:careers@miagazine.com">careers@miagazine.com</a></div>' if p.get('cta_url') else ''
+            legal_nav = ''
+            if is_legal:
+                items = ''.join(f'<li><a href="{P(lang, page_path(x))}"{" aria-current=page" if x == slug else ""}>{esc(pages[lang][x]["title"]) if x in pages[lang] else x}</a></li>' for x in LEGAL_ORDER)
+                legal_nav = f'<div class="eyebrow" style="margin-top:28px">{L("Legal center","Centro legal")}</div><ol class="legal-list">{items}</ol>'
+            toc_html = ''.join(f'<li><a href="#{x["id"]}">{esc(html.unescape(x["name"]))}</a></li>' for x in toc)
+            aside = f'<aside class="toc"><div class="eyebrow">{L("On this page","En esta página")}</div><ol>{toc_html}</ol>{legal_nav}</aside>' if is_legal else ''
+            cls = 'post-layout wrap legal' if is_legal else 'wrap feature-page'
+            html_body = f"""<article class="post" style="--c:{'#57534e' if is_legal else '#b08d57'}"><header class="post-head wrap"><div class="eyebrow">{esc(eyebrow)}</div><h1>{esc(p['title'])}</h1><p class="dek">{esc(p.get('summary',''))}</p>
+<p class="small">{t['updated']}: {dstr}</p>{cta}</header>
+<div class="{cls}">{aside}<div class="post-main page-body">{body}</div></div></article>"""
+            ld = {"@context":"https://schema.org","@type":"AboutPage" if slug=='about' else "WebPage","name":p['title'],"inLanguage":lang,"dateModified":str(p.get('updated',TODAY)),"url":BASE+path,"isPartOf":{"@type":"WebSite","name":"MIAGAZINE","url":BASE}}
+            extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+            if slug == 'careers':
+                extra += f'<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"ItemList","name":p["title"],"itemListElement":[{"@type":"ListItem","position":i+1,"name":r} for i,r in enumerate(L(["Event & editorial photographer","Videographer / filmmaker","Bilingual reporter – writer","Content creator & social media","Partnerships executive","Publicist / PR","Model & talent casting","Internships"],["Fotógrafo/a de eventos y editorial","Videógrafo/a / filmmaker","Reportero/a – redactor/a bilingüe","Creador/a de contenido y social media","Ejecutivo/a de alianzas comerciales","Publicista / relaciones públicas","Casting de modelos y talento","Pasantías"]))]}, ensure_ascii=False)}</script>'
+            page(lang, path, alt, f"{p['title']} | MIAGAZINE", p.get('summary', ''), html_body, extra)
+        # legal hub
+        cards = ''.join(f'<a class="legal-card" href="{P(lang, page_path(x))}"><h3>{esc(pages[lang][x]["title"])}</h3><p>{esc(pages[lang][x].get("summary",""))}</p><span>→</span></a>' for x in LEGAL_ORDER if x in pages[lang])
+        hub = f"""<div class="post-head wrap"><div class="eyebrow">Legal</div><h1>{L('Legal center','Centro legal')}</h1><p class="dek">{L('How we protect creators, readers and partners: intellectual property, permissions, privacy, cookies, terms and editorial standards.','Cómo protegemos a creadores, lectores y marcas: propiedad intelectual, permisos, privacidad, cookies, términos y estándares editoriales.')}</p></div>
+<section><div class="wrap legal-grid">{cards}<a class="legal-card" href="#" data-cookie-prefs><h3>{COOKIE_TXT[lang]['prefs']}</h3><p>{L('Change your cookie choices at any time.','Cambia tu elección de cookies cuando quieras.')}</p><span>→</span></a></div>
+<div class="wrap"><p class="small" style="margin-top:28px">{L('Legal requests: legal@miagazine.com · Privacy: privacy@miagazine.com · Copyright (DMCA): dmca@miagazine.com','Solicitudes legales: legal@miagazine.com · Privacidad: privacy@miagazine.com · Derechos de autor (DMCA): dmca@miagazine.com')}</p></div></section>"""
+        page(lang, P(lang, '/legal/'), P(o, '/legal/'), f"{L('Legal center','Centro legal')} | MIAGAZINE", L('Intellectual property, permissions, privacy, cookies, terms and editorial policy.','Propiedad intelectual, permisos, privacidad, cookies, términos y política editorial.'), hub)
+    return pages
 
 def build_meta(posts):
     urls = []
     for lang in ('en','es'):
-        for p in ['/', '/stories/', '/submit.html', '/advertise.html', '/about.html']: urls.append((P(lang,p), TODAY))
+        for p in ['/', '/stories/', '/submit.html', '/advertise.html', '/about.html', '/careers.html', '/legal/'] + [f'/legal/{x}.html' for x in LEGAL_ORDER]: urls.append((P(lang,p), TODAY))
         urls.append((T[lang]['journal_url'], TODAY))
         for x in posts[lang]: urls.append((T[lang]['journal_url']+x['slug']+'.html', x['date']))
     urls += [('/stories/golden-hour-key-biscayne.html', TODAY), ('/guides/miami-art-week-2026.html', TODAY)]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod></url>\n' for u,d in urls) + '</urlset>\n'
     write('/sitemap.xml', sm)
     lines = ['# MIAGAZINE', '', '> MIAGAZINE is a bilingual (English/Spanish) digital luxury magazine about Miami, founded in 2026. It publishes photographic editorials by a curated network of Miami photographers and a researched, sourced Journal on fashion & models, real estate, economy, music, trends, food & drink, tech, waterfront, design & architecture and photography, plus a free weekly newsletter, The Lens (Thursdays).', '',
-             'Key facts:', '- Coverage: Miami and South Florida.', '- Photographers submit for free, keep copyright, get full credit and earn 20% on partnerships they refer.',
+             'Key facts:', '- Coverage: Miami and South Florida: luxury, events, nightlife, public events, art, fashion, real estate, economy, music, tech.', '- Team: a select collective of publicists, reporters, photographers, filmmakers and content creators. Open positions by appointment only (careers page).', '- Photographers submit for free, keep copyright, get full credit and earn 20% on partnerships they refer.',
              '- Advertising founding rates: newsletter sponsorship $150/issue, MIA Selects listing $99/month, Branded Story $650, Event Coverage $900, Founding Partner $1,500/year.',
              '- Editorial policy: real photography only; paid content labeled "Partner"; speculative pieces labeled as fiction.', '',
-             '## Main pages', f'- [Home]({BASE}/)', f'- [Inicio (ES)]({BASE}/es/)', f'- [Submit]({BASE}/submit.html)', f'- [Advertise]({BASE}/advertise.html)', f'- [About]({BASE}/about.html)', '', '## Journal (English)']
+             '## Main pages', f'- [Home]({BASE}/)', f'- [Inicio (ES)]({BASE}/es/)', f'- [Submit]({BASE}/submit.html)', f'- [Advertise]({BASE}/advertise.html)', f'- [About]({BASE}/about.html)', f'- [Careers]({BASE}/careers.html)', f'- [Legal center]({BASE}/legal/)', f'- [Intellectual property & permissions]({BASE}/legal/intellectual-property.html)', f'- [Editorial policy]({BASE}/legal/editorial-policy.html)', '', '## Journal (English)']
     lines += [f"- [{x['title']}]({BASE}/blog/{x['slug']}.html): {x.get('excerpt','')}" for x in posts['en']]
     lines += ['', '## Journal (Español)'] + [f"- [{x['title']}]({BASE}/es/blog/{x['slug']}.html): {x.get('excerpt','')}" for x in posts['es']]
     write('/llms.txt', '\n'.join(lines) + '\n')
@@ -287,5 +379,5 @@ def refresh_legacy():
 
 if __name__ == '__main__':
     posts = load_posts(); refresh_legacy()
-    build_blog(posts); build_pages(posts); build_meta(posts)
+    build_blog(posts); build_pages(posts); build_content_pages(); build_meta(posts)
     print('posts en/es:', len(posts['en']), len(posts['es']))
