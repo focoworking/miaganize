@@ -197,3 +197,53 @@ footer .wrap.foot-grid{display:grid}
 .home-feature figcaption span:last-child{font-size:13px;opacity:.9}
 .cta-band{background:linear-gradient(rgba(14,14,14,.84),rgba(14,14,14,.84)),url(/assets/img/newsletter-header-sm.webp) center/cover}
 @media(max-width:760px){.page-hero,.page-hero.short,.home-feature{aspect-ratio:4/3}.home-feature figcaption{padding:18px}}
+/* advertise + media kit page */
+.bundles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.bundle{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.bundle img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.bundle .bi{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.bundle h3{font-size:28px}.bundle .bp{font-family:"Cormorant Garamond",serif;font-size:44px;line-height:1}
+.bundle ul{list-style:none;flex:1}.bundle li{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.bundle .btn{align-self:flex-start;margin-top:8px}
+.founding{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+.founding h2{color:var(--paper)}.founding ul{list-style:none;margin:16px 0}.founding li{padding:8px 0;border-bottom:1px solid #2c2a27}
+.founding li::before{content:"— ";color:var(--gold)}
+.founding .how{padding-left:20px}.founding .how li::before{content:none}
+.mk-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.mk-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.mk-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,14,.8),rgba(14,14,14,.2)),linear-gradient(0deg,rgba(14,14,14,.6),transparent 50%)}
+.mk-hero .wrap{position:relative;padding-block:56px;width:100%}
+.mk-hero h1{font-size:clamp(56px,10vw,128px);font-style:italic;margin:8px 0}
+.mk-hero p{font-size:18px;color:#eee}
+.mk-hero small{position:absolute;right:12px;bottom:10px;font-size:10px;color:#fff;background:rgba(0,0,0,.35);padding:3px 8px}
+.mk-pill{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.mk-pill div{background:#fff;padding:18px}.mk-pill h3{font-size:22px;color:var(--gold)}.mk-pill p{font-size:14px;color:var(--muted)}
+.mk-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-bottom:18px}
+.mk-stat{border-top:1px solid var(--ink);padding-top:12px}.mk-stat .n{font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1}
+.mk-stat span{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.mk-goals{background:var(--ink);color:var(--paper);padding:28px;margin-top:32px}
+.mk-goals .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin:14px 0}
+.mk-goals b{display:block;font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:500}.mk-goals span,.mk-goals p{font-size:13px;color:#c9c2b6}
+.three-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}.three-col h3{font-size:26px}
+.mock-web{overflow-x:auto;padding-bottom:12px}
+.mock-web .mock{display:grid;grid-template-columns:2.6fr 1fr 1fr 1.6fr;gap:20px;align-items:end;min-width:900px;font-size:12px}
+.mock-web .mk{display:flex;flex-direction:column;gap:8px}.mock-web .ml{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mock-web .m-web{border:1px solid #cfc8bc;background:#fff}.mock-web .bar{display:flex;gap:5px;align-items:center;padding:7px 10px;background:#efebe4}
+.mock-web .bar i{width:8px;height:8px;border-radius:50%;background:#cbc3b6}.mock-web .bar span{margin-left:8px;font-size:10px;background:#fff;padding:1px 8px;border-radius:8px;color:var(--muted)}
+.mock-web .mw-in{padding:14px;background:var(--paper)}.mock-web .mw-nav{font-family:"Cormorant Garamond",serif;letter-spacing:.3em;font-weight:600;margin-bottom:8px}
+.mock-web .mw-in img{width:100%;height:220px;object-fit:cover;object-position:center 62%}
+.mock-web .mw-chip{display:inline-block;background:#9f1239;color:#fff;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:2px 6px;margin:8px 0 4px}
+.mock-web .mw-t{font-family:"Cormorant Garamond",serif;font-size:24px;line-height:1.05}.mock-web .mw-d{font-size:11px;color:var(--muted)}
+.mock-web .m-phone{border:6px solid #111;border-radius:20px;background:#fff;overflow:hidden;height:400px;display:flex;flex-direction:column;position:relative}
+.mock-web .ig-h{display:flex;gap:6px;align-items:center;padding:7px}.mock-web .ig-h b{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#b08d57,#0e0e0e)}
+.mock-web .ig-h strong,.mock-web .ig-h span{display:block;font-size:10px}.mock-web .ig-h span{color:var(--muted);font-size:9px}
+.mock-web img.ig{width:100%;height:220px;object-fit:cover;object-position:center 62%}.mock-web .ig-c{font-size:10px;padding:7px}
+.mock-web .st img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mock-web .st-o{position:absolute;left:10px;right:10px;top:30px;color:#fff;display:flex;flex-direction:column;gap:6px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.mock-web .st-o span{font-size:9px;letter-spacing:.18em;text-transform:uppercase}.mock-web .st-o div{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.05}
+.mock-web .st-o em{font-style:normal;font-size:10px;background:#fff;color:#111;align-self:flex-start;padding:3px 8px;border-radius:10px;margin-top:150px;text-shadow:none}
+.mock-web .m-mail{background:#fff;border:1px solid #cfc8bc;padding:14px}.mock-web .mm-h{font-family:"Cormorant Garamond",serif;letter-spacing:.3em;font-weight:600;text-align:center;border-bottom:1px solid var(--line);padding-bottom:6px}
+.mock-web .mm-s{font-size:9px;text-align:center;color:var(--muted);margin:6px 0;text-transform:uppercase;letter-spacing:.1em}.mock-web .mm-s b{border:1px solid var(--ink);padding:1px 6px;color:var(--ink)}
+.mock-web .m-mail img{width:100%;height:130px;object-fit:cover;object-position:center 62%}.mock-web .mm-t{font-family:"Cormorant Garamond",serif;font-size:18px;margin:6px 0 2px}
+.mock-web .m-mail p{font-size:11px;color:var(--muted)}.mock-web .mm-b{display:inline-block;margin-top:8px;background:var(--ink);color:#fff;font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px}
+@media(max-width:760px){.founding{grid-template-columns:1fr}.mk-pill{grid-template-columns:1fr}}
