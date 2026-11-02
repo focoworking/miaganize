@@ -51,6 +51,7 @@ El generador reemplaza los placeholders en todas las páginas (ES y EN). Hacer c
 | `BEEHIIV_FORM_ACTION` | beehiiv → Grow → Subscribe forms → embed → URL del `action` del formulario |
 | `TALLY_FORM_URL` | tally.so → formulario de envíos (campos en `docs/02-PROGRAMA-FOTOGRAFOS.md`) → Share link |
 | `CALENDLY_URL` | Calendly (o Cal.com gratis) → evento "Llamada 15 min MIAGAZINE" |
+| `FORM_ENQUIRY_ACTION` | Formspree (gratis) → New form → copiar la URL `https://formspree.io/f/...` (formulario de marcas en Anúnciate) |
 | `WHATSAPP_URL` | `https://wa.me/1XXXXXXXXXX` (número de negocio, solo dígitos) |
 | `STRIPE_*` | Stripe → Payment Links: uno por producto (ver tabla abajo) |
 

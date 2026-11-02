@@ -18,5 +18,7 @@
   "STRIPE_BUNDLE_ARTDECO": "",
   "STRIPE_BUNDLE_BOATSHOW": "",
   "PREVIEW_NOINDEX": true,
-  "_help_preview": "PREVIEW_NOINDEX=true mientras la web esté en el dominio temporal de Hostinger. Cambiar a false cuando miagazine.com esté activo."
+  "_help_preview": "PREVIEW_NOINDEX=true mientras la web esté en el dominio temporal de Hostinger. Cambiar a false cuando miagazine.com esté activo.",
+  "FORM_ENQUIRY_ACTION": "",
+  "_help_form": "FORM_ENQUIRY_ACTION: URL de Formspree/Tally/Basin que recibe el formulario de marcas (página Anúnciate)."
 }
